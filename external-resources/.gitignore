@@ -1,0 +1,14 @@
+# OSX
+.DS_Store
+
+# Editor
+.vscode
+
+# Build files
+translations/
+
+# npm file
+node_modules/
+
+# Packaged files
+dist/

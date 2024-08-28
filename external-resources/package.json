@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "",
+    "i18n-extract": "rimraf translations && i18n-extract",
+    "i18n-push": "i18n-push",
+    "i18n-update": "i18n-update",
+    "lint": "eslint ./",
+    "clean": "rimraf translations"
+  },
+  "author": "ArthurZheng",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-scratch": "^5.0.0",
+    "openblock-resource": "^0.2.0-prerelease.20240619025751"
+  }
+}
