@@ -1,9 +1,9 @@
-# openblock-resource
+# DigitalCoDeBlock-resource
 
 [![Publish npm package](https://github.com/openblockcc/openblock-resource/actions/workflows/publish.yml/badge.svg)](https://github.com/openblockcc/openblock-resource/actions/workflows/publish.yml)
 ![GitHub](https://img.shields.io/github/license/openblockcc/openblock-resource)
 
-Provide a local resource server for openblock.
+Provide a local resource server for Digital CoDeBlock.
 
 ## Instructions
 
@@ -20,3 +20,7 @@ Provide a local resource server for openblock.
     ```bash
     npm test
     ```
+
+# Credits
+
+[OpenBlock-Resource](https://github.com/openblockcc/openblock-resource)
