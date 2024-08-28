@@ -1,6 +1,6 @@
 {
-  "name": "openblock-resource",
-  "version": "0.2.0",
+  "name": "digitalcodeblock-resource",
+  "version": "0.2.1",
   "description": "External resources for OpenBlock projects",
   "main": "index.js",
   "bin": {
