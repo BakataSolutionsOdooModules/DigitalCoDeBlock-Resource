@@ -137,7 +137,7 @@ getLatest()
                         throw error;
                     }
 
-                    if (zipChecksum === hash) {
+                    if (zipChecksum.toUpperCase() === hash.toUpperCase()) {
                         console.info(`${resourcePath} has passed the checksum detection`);
                         extract(resourcePath, {dir: extractPath})
                             .then(() => {
