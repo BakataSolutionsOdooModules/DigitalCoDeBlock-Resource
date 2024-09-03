@@ -1,7 +1,7 @@
 {
   "name": "digitalcodeblock-resource",
   "version": "0.2.2",
-  "description": "External resources for OpenBlock projects",
+  "description": "External resources for DigitalCoDeBlock projects",
   "main": "index.js",
   "bin": {
     "gen-config": "./script/bin/gen-config.js",
