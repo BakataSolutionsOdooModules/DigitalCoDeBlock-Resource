@@ -137,8 +137,8 @@ getLatest()
                         throw error;
                     }
 
-                    if (true /*zipChecksum.toUpperCase() === hash.toUpperCase()*/) {
-                        console.info(`${resourcePath} has passed the checksum detection`);
+                    if ( zipChecksum.toUpperCase() === hash.toUpperCase() ) {
+                        console.info(`${resourcePath} has passed the checksum detection. Checksum was ${zipChecksum.toUpperCase()}`);
                         extract(resourcePath, {dir: extractPath})
                             .then(() => {
                                 fs.rmSync(downloadPath, {recursive: true, force: true});
