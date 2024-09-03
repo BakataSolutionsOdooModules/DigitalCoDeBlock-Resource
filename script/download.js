@@ -138,7 +138,7 @@ getLatest()
                     }
 
                     if ( zipChecksum.toUpperCase() === hash.toUpperCase() ) {
-                        console.info(`${resourcePath} has passed the checksum detection. Checksum was ${zipChecksum.toUpperCase()}`);
+                        console.info(`${resourcePath} has passed the checksum detection.`);
                         extract(resourcePath, {dir: extractPath})
                             .then(() => {
                                 fs.rmSync(downloadPath, {recursive: true, force: true});
@@ -149,7 +149,7 @@ getLatest()
                                 process.exit(1);
                             });
                     } else {
-                        console.error(clc.red(`ERR!: ${resourcePath} has failed the checksum detection`));
+                        console.error(clc.red(`ERR!: ${resourcePath} has failed the checksum detection.\nZip : ${zipChecksum.toUpperCase()}\nHash : ${hash.toUpperCase()}`));
                         process.exit(1);
                     }
                 });
