@@ -30,7 +30,7 @@ function registerToolboxs () {
         </value>
         <value name="DATA">
             <shadow type="text">
-                <field name="TEXT">Hello OpenBlock</field>
+                <field name="TEXT">Hello DigitalCoDeBlock</field>
             </shadow>
         </value>
     </block>

@@ -14,7 +14,7 @@ function registerToolboxs () {
     <block type="insertSourceCode_roundBlock" id="insertSourceCode_roundBlock">
         <value name="CODE">
             <shadow type="text">
-                <field name="TEXT">"Hello OpenBlock"</field>
+                <field name="TEXT">"Hello DigitalCoDeBlock"</field>
             </shadow>
         </value>
     </block>

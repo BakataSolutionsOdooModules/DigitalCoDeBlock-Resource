@@ -13,7 +13,7 @@ Notice that offical attributes can only be officially marked by the community, p
 
 ## Localization
 
-All resources marked as offical will be included in the official translation maintenance list, do not modify the translation file content of these files directly. You should apply to join the OpenBlock team on transifex to translate these content: https://www.transifex.com/openblockcc/public/
+All resources marked as offical will be included in the official translation maintenance list, do not modify the translation file content of these files directly. You should apply to join the DigitalCoDeBlock team on transifex to translate these content: https://www.transifex.com/openblockcc/public/
 
 ## Pack
 

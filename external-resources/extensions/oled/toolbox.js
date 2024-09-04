@@ -253,7 +253,7 @@ function registerToolboxs () {
     <block type="oled_print" id="oled_print">
         <value name="DATA">
             <shadow type="text">
-                <field name="TEXT">Hello OpenBlock</field>
+                <field name="TEXT">Hello DigitalCoDeBlock</field>
             </shadow>
         </value>
     </block>

@@ -43,9 +43,9 @@ class OpenblockResourceServer extends Emitter{
 "${envOpenBlockExternalResources}"`);
             this._builtinResourcesPath = envOpenBlockExternalResources;
         } else {
-            const thirdPartyResourcesPath = path.join(this._builtinResourcesPath, '../../OpenBlockExternalResources');
+            const thirdPartyResourcesPath = path.join(this._builtinResourcesPath, '../../DigitalCoDeBlockExternalResources');
             if (fs.existsSync(thirdPartyResourcesPath)) {
-                console.info('The OpenBlockExternalResources folder is detected in the parent directory');
+                console.info('The DigitalCoDeBlockExternalResources folder is detected in the parent directory');
                 this._builtinResourcesPath = thirdPartyResourcesPath;
             }
         }
