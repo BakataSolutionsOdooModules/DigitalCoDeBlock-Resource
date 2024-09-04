@@ -50,12 +50,13 @@ analogWrite(rgbAzul, ${value_led_blue});
         return code;
     }
 
-    Blockly.Arduino.deviceMentorBit_ZumbadorControl = function(){
+    Blockly.Arduino.deviceMentorBit_ZumbadorControl = function(block){
         defineHeaders();
         Blockly.Arduino.definitions_.define_constants_Zumbador = `uint8_t zumbador = 25;`;
 
-        const value_zumb_freq = this.getFieldValue('deviceMentorBit_ZumbadorControl_Freq');
-        const value_zumb_time = this.getFieldValue('deviceMentorBit_ZumbadorControl_Duration');
+        const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
+        const value_zumb_freq = Blockly.Arduino.valueToCode(block, 'deviceMentorBit_ZumbadorControl_Freq', order);
+        const value_zumb_time = Blockly.Arduino.valueToCode(block, 'deviceMentorBit_ZumbadorControl_Duration', order);
 
         const code = 
 `
@@ -181,12 +182,13 @@ uint16_t obtenerTemperatura(){
     ///////////////////////////////////////////////////////////////////////
     /// Motores
 
-    Blockly.Arduino.deviceMentorBit_MotorDCControl = function(){
+    Blockly.Arduino.deviceMentorBit_MotorDCControl = function(block){
         defineHeaders();
         Blockly.Arduino.definitions_.define_constants_MotorDC = `uint8_t enable = 4;\nuint8_t dcinput1 = 28;\nuint8_t dcinput2 = 29;`;
         Blockly.Arduino.setups_[`deviceMentorBit_MotorDCInit`] = `pinMode(enable, OUTPUT);\npinMode(dcinput1, OUTPUT);\npinMode(dcinput2, OUTPUT);`
         
-        const intensidad = this.getFieldValue("deviceMentorBit_MotorDCControl_Intensity");
+        const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
+        const intensidad = Blockly.Arduino.valueToCode(block,"deviceMentorBit_MotorDCControl_Intensity", order);
         const sentido = this.getFieldValue("deviceMentorBit_MotorDCControl_Orientation");
         const digitalWrites = sentido == '1' 
             ? 
@@ -207,7 +209,7 @@ analogWrite(enable, ${intensidad});
         return code;
     }
 
-    Blockly.Arduino.deviceMentorBit_MotorStepsControl = function(){
+    Blockly.Arduino.deviceMentorBit_MotorStepsControl = function(block){
         defineHeaders();
         Blockly.Arduino.definitions_.define_constants_MotorSteps = 
 `
@@ -234,8 +236,8 @@ pinMode(bobina3, OUTPUT);
 pinMode(bobina4, OUTPUT);
 `;
 
-
-        const steps = this.getFieldValue("deviceMentorBit_MotorStepsControl_Steps");
+        const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
+        const steps = Blockly.Arduino.valueToCode(block,"deviceMentorBit_MotorStepsControl_Steps", order);
         const sentido = this.getFieldValue("deviceMentorBit_MotorStepsControl_Orientation");
 
         const digitalWrites = sentido == '1' 
@@ -271,14 +273,14 @@ digitalWrite(bobina4, LOW);
         return code;
     }
 
-    Blockly.Arduino.deviceMentorBit_MotorServoControl = function(){
+    Blockly.Arduino.deviceMentorBit_MotorServoControl = function(block){
         defineHeaders();
         Blockly.Arduino.definitions_.define_library_Servo = `#include "Servo.h"`;
         Blockly.Arduino.definitions_.define_constants_MotorServo = `Servo myServo;`;
         Blockly.Arduino.setups_[`deviceMentorBit_MotorServoInit`] = `myServo.attach(3);`
 
-
-        const degrees = this.getFieldValue("deviceMentorBit_MotorServoControl_Degrees");
+        const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
+        const degrees = Blockly.Arduino.valueToCode(block,"deviceMentorBit_MotorServoControl_Degrees", order);
         const code = 
 `
 myServo.write(${degrees});
@@ -321,7 +323,7 @@ lcd.print(${message});
 
     Blockly.Arduino.deviceMentorBit_LCDScreenClear = function(){
         defineHeaders();
-         Blockly.Arduino.definitions_.define_library_LiquidCrystal_I2C = `#include "LiquidCrystal_I2C.h"`;
+        Blockly.Arduino.definitions_.define_library_LiquidCrystal_I2C = `#include "LiquidCrystal_I2C.h"`;
         Blockly.Arduino.definitions_.define_constants_LCDScreen = `LiquidCrystal_I2C lcd(0x3F, 16, 2);`;
 
         Blockly.Arduino.setups_[`deviceMentorBit_LCDScreenInit`] = 
@@ -353,10 +355,10 @@ oled.clearDisplay();
 
         const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
         const message = Blockly.Arduino.valueToCode(block, "deviceMentorBit_OLEDScreenControl_Message", order) || '';
-        const col = this.getFieldValue("deviceMentorBit_OLEDScreenControl_Column");
-        const row = this.getFieldValue("deviceMentorBit_OLEDScreenControl_Row");
+        const col = Blockly.Arduino.valueToCode(block, "deviceMentorBit_OLEDScreenControl_Column", order);
+        const row = Blockly.Arduino.valueToCode(block, "deviceMentorBit_OLEDScreenControl_Row", order);
         const cleaning = this.getFieldValue("deviceMentorBit_OLEDScreenControl_Cleaning");
-        const fontSize = this.getFieldValue("deviceMentorBit_OLEDScreenControl_FontSize");
+        const fontSize = Blockly.Arduino.valueToCode(block, "deviceMentorBit_OLEDScreenControl_FontSize", order);
 
         const code =
 `
@@ -490,7 +492,7 @@ void imprimirDisplay(double valor)
 
 
         const order = Blockly.Arduino.ORDER_UNARY_PREFIX;
-        const year =Blockly.Arduino.valueToCode(block, 'deviceMentorBit_RTCControl_Year', order);
+        const year = Blockly.Arduino.valueToCode(block, 'deviceMentorBit_RTCControl_Year', order);
         const month = this.getFieldValue('deviceMentorBit_RTCControl_Month');
         const dayMonth = Blockly.Arduino.valueToCode(block, 'deviceMentorBit_RTCControl_Day', order);
         const hour = Blockly.Arduino.valueToCode(block, 'deviceMentorBit_RTCControl_Hour', order);

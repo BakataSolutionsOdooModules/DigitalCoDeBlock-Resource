@@ -86,12 +86,25 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_ZumbadorControl = {
       init: function() {
-        this.appendDummyInput('Zumbador')
-          .appendField('Hacer sonar zumbador con frecuencia')
-          .appendField(new Blockly.FieldNumber(0, 0, Infinity, 1), 'deviceMentorBit_ZumbadorControl_Freq')
-          .appendField('durante')
-          .appendField(new Blockly.FieldNumber(0, 0, Infinity, 1), 'deviceMentorBit_ZumbadorControl_Duration')
-          .appendField('millisegundos');
+        this.jsonInit({
+          message0: 'Hacer sonar zumbador con frecuencia %1 durante %2 millisegundos',
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_ZumbadorControl_Freq",
+            },
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_ZumbadorControl_Duration"
+            }
+          ]
+        });
+        // this.appendDummyInput('Zumbador')
+        //   .appendField('Hacer sonar zumbador con frecuencia')
+        //   .appendField(new Blockly.FieldNumber(0, 0, Infinity, 1), 'deviceMentorBit_ZumbadorControl_Freq')
+        //   .appendField('durante')
+        //   .appendField(new Blockly.FieldNumber(0, 0, Infinity, 1), 'deviceMentorBit_ZumbadorControl_Duration')
+        //   .appendField('millisegundos');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setTooltip('Para controlar color del LED RGB');
@@ -221,15 +234,31 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_MotorDCControl = {
       init: function() {
-
-        this.appendDummyInput('MotorDC')
-          .appendField('Mover motor de Corriente Continua con intensidad')
-          .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorDCControl_Intensity')
-          .appendField('en sentido')
-          .appendField(new Blockly.FieldDropdown([
-              ['HORARIO', '1'],
-              ['ANTIHORARIO', '2']
-            ]), 'deviceMentorBit_MotorDCControl_Orientation');
+        this.jsonInit({
+          message0: 'Mover motor de Corriente Continua con intensidad %1 en sentido %2',
+          args0 : [
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_MotorDCControl_Intensity",
+            },
+            {
+              "type": "field_dropdown",
+              "name": "deviceMentorBit_MotorDCControl_Orientation",
+              "options": [
+                ['HORARIO', '1'],
+                ['ANTIHORARIO', '2']
+              ]
+            },
+          ]
+        });
+        // this.appendDummyInput('MotorDC')
+        //   .appendField('Mover motor de Corriente Continua con intensidad')
+        //   .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorDCControl_Intensity')
+        //   .appendField('en sentido')
+        //   .appendField(new Blockly.FieldDropdown([
+        //       ['HORARIO', '1'],
+        //       ['ANTIHORARIO', '2']
+        //     ]), 'deviceMentorBit_MotorDCControl_Orientation');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -241,18 +270,35 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_MotorStepsControl = {
       init: function() {
-        this.appendDummyInput('MotorSteps')
-          .appendField('Mover motor de Paso a Paso')
-          .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorStepsControl_Steps')
-          .appendField('pasos en sentido')
-          .appendField(new Blockly.FieldDropdown([
-              ['HORARIO', '1'],
-              ['ANTIHORARIO', '2']
-            ]), 'deviceMentorBit_MotorStepsControl_Orientation');
+        this.jsonInit({
+          message0: 'Mover motor de Paso a Paso %1 pasos en sentido %2',
+          args0 : [
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_MotorStepsControl_Steps",
+            },
+            {
+              "type": "field_dropdown",
+              "name": "deviceMentorBit_MotorStepsControl_Orientation",
+              "options": [
+                ['HORARIO', '1'],
+                ['ANTIHORARIO', '2']
+              ]
+            },
+          ]
+        });
+        // this.appendDummyInput('MotorSteps')
+        //   .appendField('Mover motor de Paso a Paso')
+        //   .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorStepsControl_Steps')
+        //   .appendField('pasos en sentido')
+        //   .appendField(new Blockly.FieldDropdown([
+        //       ['HORARIO', '1'],
+        //       ['ANTIHORARIO', '2']
+        //     ]), 'deviceMentorBit_MotorStepsControl_Orientation');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setTooltip('Para controlar motor de corriente continua');
+        this.setTooltip('Para controlar motor de paso a paso');
         this.setHelpUrl('www.google.es');
         this.setColour(COLOR.engine);
       }
@@ -260,10 +306,19 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_MotorServoControl = {
       init: function() {
-        this.appendDummyInput('MotorServo')
-          .appendField('Mover motor servo')
-          .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorServoControl_Degrees')
-          .appendField('grados')
+        this.jsonInit({
+          message0: "Mover motor servo %1 grados",
+          args0 : [
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_MotorServoControl_Degrees",
+            },
+          ]
+        });
+        // this.appendDummyInput('MotorServo')
+        //   .appendField('Mover motor servo')
+        //   .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity), 'deviceMentorBit_MotorServoControl_Degrees')
+        //   .appendField('grados');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -288,11 +343,11 @@ function registerBlocks (Blockly) {
               "name": "deviceMentorBit_LCDScreenControl_Message",
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "deviceMentorBit_LCDScreenControl_Column"
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "deviceMentorBit_LCDScreenControl_Row"
             },
             {
@@ -350,11 +405,11 @@ function registerBlocks (Blockly) {
               "name": "deviceMentorBit_OLEDScreenControl_Message",
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "deviceMentorBit_OLEDScreenControl_Column"
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "deviceMentorBit_OLEDScreenControl_Row"
             },
             {
@@ -366,7 +421,7 @@ function registerBlocks (Blockly) {
               ]
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "deviceMentorBit_OLEDScreenControl_FontSize"
             }
           ],
@@ -411,10 +466,19 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_Display7Control = {
       init: function() {
-        this.appendDummyInput('Display7')
-          .appendField('Mostrar')
-          .appendField(new Blockly.FieldNumber(0,0, 9999), 'deviceMentorBit_Display7Control_Number')
-          .appendField('en el display 7 segmentos');
+        this.jsonInit({
+          message0 : "Mostrar %1 en el display 7 segmentos",
+          args0 : [
+            {
+              "type": "input_value",
+              "name": "deviceMentorBit_Display7Control_Number",
+            }
+          ]
+        });
+        // this.appendDummyInput('Display7')
+        //   .appendField('Mostrar')
+        //   .appendField(new Blockly.FieldNumber(0,0, 9999), 'deviceMentorBit_Display7Control_Number')
+        //   .appendField('en el display 7 segmentos');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -444,30 +508,69 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_RTCControl = {
       init: function() {
         //field_date
-        this.appendDummyInput('RTC')
-          .appendField('Ajustar hora del RTC a las')
-          .appendField(new Blockly.FieldNumber(0,0, 23), 'deviceMentorBit_RTCControl_Hour')
-          .appendField(':')
-          .appendField(new Blockly.FieldNumber(0,0, 59), 'deviceMentorBit_RTCControl_Minutes')
-          .appendField('del')
-          .appendField(new Blockly.FieldNumber(1,1, 31), 'deviceMentorBit_RTCControl_Day')
-          .appendField('/')
-          .appendField(new Blockly.FieldDropdown([
-            ['ENERO', '1'],
-            ['FEBRERO', '2'],
-            ['MARZO', '3'],
-            ['ABRIL', '4'],
-            ['MAYO', '5'],
-            ['JUNIO', '6'],
-            ['JULIO', '7'],
-            ['AGOSTO', '8'],
-            ['SEPTIEMBRE', '9'],
-            ['OCTUBRE', '10'],
-            ['NOVIEMBRE', '11'],
-            ['DICIEMBRE', '12']
-          ]), 'deviceMentorBit_RTCControl_Month')
-          .appendField('/')
-          .appendField(new Blockly.FieldNumber(0,0, Infinity), 'deviceMentorBit_RTCControl_Year');
+        this.jsonInit({
+          "message0": 'Ajustar hora del RTC a las %1 : %2 del %3/%4/%5',
+          "args0": [
+            {
+              type : "input_value",
+              name : "deviceMentorBit_RTCControl_Hour",
+            },
+            {
+              type : "input_value",
+              name : "deviceMentorBit_RTCControl_Minutes",
+            },
+            {
+              type : "input_value",
+              name : "deviceMentorBit_RTCControl_Day",
+            },
+            {
+              type: 'field_dropdown',
+              name: 'MODEL',
+              options: [
+                ['ENERO', '1'],
+                ['FEBRERO', '2'],
+                ['MARZO', '3'],
+                ['ABRIL', '4'],
+                ['MAYO', '5'],
+                ['JUNIO', '6'],
+                ['JULIO', '7'],
+                ['AGOSTO', '8'],
+                ['SEPTIEMBRE', '9'],
+                ['OCTUBRE', '10'],
+                ['NOVIEMBRE', '11'],
+                ['DICIEMBRE', '12']
+              ]
+            },
+            {
+              type : "input_value",
+              name : "deviceMentorBit_RTCControl_Year",
+            },
+          ]
+        })
+        // this.appendDummyInput('RTC')
+        //   .appendField('Ajustar hora del RTC a las')
+        //   .appendField(new Blockly.FieldNumber(0,0, 23), 'deviceMentorBit_RTCControl_Hour')
+        //   .appendField(':')
+        //   .appendField(new Blockly.FieldNumber(0,0, 59), 'deviceMentorBit_RTCControl_Minutes')
+        //   .appendField('del')
+        //   .appendField(new Blockly.FieldNumber(1,1, 31), 'deviceMentorBit_RTCControl_Day')
+        //   .appendField('/')
+        //   .appendField(new Blockly.FieldDropdown([
+        //     ['ENERO', '1'],
+        //     ['FEBRERO', '2'],
+        //     ['MARZO', '3'],
+        //     ['ABRIL', '4'],
+        //     ['MAYO', '5'],
+        //     ['JUNIO', '6'],
+        //     ['JULIO', '7'],
+        //     ['AGOSTO', '8'],
+        //     ['SEPTIEMBRE', '9'],
+        //     ['OCTUBRE', '10'],
+        //     ['NOVIEMBRE', '11'],
+        //     ['DICIEMBRE', '12']
+        //   ]), 'deviceMentorBit_RTCControl_Month')
+        //   .appendField('/')
+        //   .appendField(new Blockly.FieldNumber(0,0, Infinity), 'deviceMentorBit_RTCControl_Year');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
