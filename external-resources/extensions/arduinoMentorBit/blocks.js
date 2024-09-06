@@ -16,21 +16,21 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LEDControl = {
       init: function() {
         this.jsonInit({
-          "message0": '%2 LED de color %1',
-          "args0": [
+          message0: '%2 LED de color %1',
+          args0: [
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_LEDControl_LED",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_LEDControl_LED",
+              options: [
                 ['Rojo', '5'],
                 ['Verde', '6'],
                 ['Azul', '7']
               ]
             },
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_LEDControl_LED_STATE",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_LEDControl_LED_STATE",
+              options: [
                   ['ENCENDIDO', '1'],
                   ['APAGADO', '0']
               ]
@@ -48,27 +48,27 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LEDRGBControl = {
       init: function() {
         this.jsonInit({
-          "message0": 'Fijar LED RGB con Rojo %1, Verde %2 y Azul %3',
-          "args0": [
+          message0: 'Fijar LED RGB con Rojo %1, Verde %2 y Azul %3',
+          args0: [
             {
-              "type": "field_slider",
-              "name": "deviceMentorBit_LEDRGBControl_Red",
+              type: "field_slider",
+              name: "deviceMentorBit_LEDRGBControl_Red",
               "value": "0",
               "precision": 1,
               "min": "0",
               "max": "255"
             },
             {
-              "type": "field_slider",
-              "name": "deviceMentorBit_LEDRGBControl_Green",
+              type: "field_slider",
+              name: "deviceMentorBit_LEDRGBControl_Green",
               "value": "0",
               "precision": 1,
               "min": "0",
               "max": "255"
             },
             {
-              "type": "field_slider",
-              "name": "deviceMentorBit_LEDRGBControl_Blue",
+              type: "field_slider",
+              name: "deviceMentorBit_LEDRGBControl_Blue",
               "value": "0",
               "precision": 1,
               "min": "0",
@@ -88,14 +88,14 @@ function registerBlocks (Blockly) {
       init: function() {
         this.jsonInit({
           message0: 'Hacer sonar zumbador con frecuencia %1 durante %2 millisegundos',
-          "args0": [
+          args0: [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_ZumbadorControl_Freq",
+              type: "input_value",
+              name: "deviceMentorBit_ZumbadorControl_Freq",
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_ZumbadorControl_Duration"
+              type: "input_value",
+              name: "deviceMentorBit_ZumbadorControl_Duration"
             }
           ]
         });
@@ -238,13 +238,13 @@ function registerBlocks (Blockly) {
           message0: 'Mover motor de Corriente Continua con intensidad %1 en sentido %2',
           args0 : [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_MotorDCControl_Intensity",
+              type: "input_value",
+              name: "deviceMentorBit_MotorDCControl_Intensity",
             },
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_MotorDCControl_Orientation",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_MotorDCControl_Orientation",
+              options: [
                 ['HORARIO', '1'],
                 ['ANTIHORARIO', '2']
               ]
@@ -274,13 +274,13 @@ function registerBlocks (Blockly) {
           message0: 'Mover motor de Paso a Paso %1 pasos en sentido %2',
           args0 : [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_MotorStepsControl_Steps",
+              type: "input_value",
+              name: "deviceMentorBit_MotorStepsControl_Steps",
             },
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_MotorStepsControl_Orientation",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_MotorStepsControl_Orientation",
+              options: [
                 ['HORARIO', '1'],
                 ['ANTIHORARIO', '2']
               ]
@@ -310,8 +310,8 @@ function registerBlocks (Blockly) {
           message0: "Mover motor servo %1 grados",
           args0 : [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_MotorServoControl_Degrees",
+              type: "input_value",
+              name: "deviceMentorBit_MotorServoControl_Degrees",
             },
           ]
         });
@@ -336,30 +336,30 @@ function registerBlocks (Blockly) {
 
       init : function(){
         this.jsonInit({
-          "message0": 'Mostrar %1 en pantalla LCD en la columna %2 y fila %3 %4',
-          "args0": [
+          message0: 'Mostrar %1 en pantalla LCD en la columna %2 y fila %3 %4',
+          args0: [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_LCDScreenControl_Message",
+              type: "input_value",
+              name: "deviceMentorBit_LCDScreenControl_Message",
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_LCDScreenControl_Column"
+              type: "input_value",
+              name: "deviceMentorBit_LCDScreenControl_Column"
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_LCDScreenControl_Row"
+              type: "input_value",
+              name: "deviceMentorBit_LCDScreenControl_Row"
             },
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_LCDScreenControl_Cleaning",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_LCDScreenControl_Cleaning",
+              options: [
                 ['LIMPIANDO ANTES DE MOSTRAR', '0'],
                 ['DEJANDO MENSAJES ACTUALES', '1']
               ]
             },
           ],
-           "colour" : COLOR.screen
+           colour : COLOR.screen
         });
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
@@ -384,8 +384,11 @@ function registerBlocks (Blockly) {
     }
     Blockly.Blocks.deviceMentorBit_LCDScreenClear = {
       init: function() {
-        this.appendDummyInput('LCDScreenClear')
-          .appendField('Limpiar pantalla LCD');
+        this.jsonInit({
+          message0: "Limpiar pantalla LCD"
+        })
+        // this.appendDummyInput('LCDScreenClear')
+        //   .appendField('Limpiar pantalla LCD');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -398,34 +401,34 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_OLEDScreenControl = {
       init: function() {
         this.jsonInit({
-          "message0": 'Mostrar %1 en pantalla OLED en la columna %2 y fila %3 %4, con tamaño de letra %5',
-          "args0": [
+          message0: 'Mostrar %1 en pantalla OLED en la columna %2 y fila %3 %4, con tamaño de letra %5',
+          args0: [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_OLEDScreenControl_Message",
+              type: "input_value",
+              name: "deviceMentorBit_OLEDScreenControl_Message",
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_OLEDScreenControl_Column"
+              type: "input_value",
+              name: "deviceMentorBit_OLEDScreenControl_Column"
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_OLEDScreenControl_Row"
+              type: "input_value",
+              name: "deviceMentorBit_OLEDScreenControl_Row"
             },
             {
-              "type": "field_dropdown",
-              "name": "deviceMentorBit_OLEDScreenControl_Cleaning",
-              "options": [
+              type: "field_dropdown",
+              name: "deviceMentorBit_OLEDScreenControl_Cleaning",
+              options: [
                 ['LIMPIANDO ANTES DE MOSTRAR', '0'],
                 ['DEJANDO MENSAJES ACTUALES', '1']
               ]
             },
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_OLEDScreenControl_FontSize"
+              type: "input_value",
+              name: "deviceMentorBit_OLEDScreenControl_FontSize"
             }
           ],
-           "colour" : COLOR.screen
+           colour : COLOR.screen
         });
         //this.appendDummyInput('OLEDScreen')
         //   .appendField('Mostrar')
@@ -450,8 +453,11 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_OLEDScreenClear = {
       init: function() {
-        this.appendDummyInput('OLEDScreenClear')
-          .appendField('Limpiar pantalla OLED');
+        this.jsonInit({
+          message0 : "Limpiar pantalla OLED"
+        });
+        // this.appendDummyInput('OLEDScreenClear')
+        //   .appendField('Limpiar pantalla OLED');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -470,8 +476,8 @@ function registerBlocks (Blockly) {
           message0 : "Mostrar %1 en el display 7 segmentos",
           args0 : [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_Display7Control_Number",
+              type: "input_value",
+              name: "deviceMentorBit_Display7Control_Number",
             }
           ]
         });
@@ -491,8 +497,11 @@ function registerBlocks (Blockly) {
 
     Blockly.Blocks.deviceMentorBit_Display7Clear = {
       init: function() {
-        this.appendDummyInput('Display7Clear')
-          .appendField('Limpiar display 7 segmentos');
+        this.jsonInit({
+          message0 : 'Limpiar display 7 segmentos'
+        });
+        // this.appendDummyInput('Display7Clear')
+        //   .appendField('Limpiar display 7 segmentos');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -509,8 +518,8 @@ function registerBlocks (Blockly) {
       init: function() {
         //field_date
         this.jsonInit({
-          "message0": 'Ajustar hora del RTC a las %1 : %2 del %3/%4/%5',
-          "args0": [
+          message0: 'Ajustar hora del RTC a las %1 : %2 del %3/%4/%5',
+          args0: [
             {
               type : "input_value",
               name : "deviceMentorBit_RTCControl_Hour",
@@ -617,14 +626,14 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_SDRead = {
       init: function(){
         this.jsonInit({
-          "message0": 'Leer del archivo %1 de la tarjeta MicroSD',
-          "args0": [
+          message0: 'Leer del archivo %1 de la tarjeta MicroSD',
+          args0: [
             {
-              "type": "input_value",
-              "name": "deviceMentorBit_SDRead_File",
+              type: "input_value",
+              name: "deviceMentorBit_SDRead_File",
             }
           ],
-           "colour" : COLOR.others,
+           colour : COLOR.others,
            extensions: ['output_string']
            
         });
