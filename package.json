@@ -47,7 +47,7 @@
     "node-abort-controller": "^3.0.1",
     "node-fetch": "^2.7.0",
     "node-fetch-progress": "^1.0.2",
-    "digitalcodeblock-l10n": "git@github.com:javierduquebakata/DigitalCoDeBlock-l10n.git",
+    "digitalcodeblock-l10n": "git@github.com:BakataSolutionsOdooModules/DigitalCoDeBlock-l10n.git",
     "openblock-parse-release-message": "0.0.1",
     "proper-lockfile": "^4.1.2",
     "require-all": "^3.0.0"
