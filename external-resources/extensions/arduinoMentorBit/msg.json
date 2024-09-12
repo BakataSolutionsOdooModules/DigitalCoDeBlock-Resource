@@ -1,4 +1,10 @@
 {
+    "MENTORBIT_BASE_CATEGORY" : "MentorBit Base",
+    "MENTORBIT_SENSOR_CATEGORY" : "MentorBit Sensores",
+    "MENTORBIT_MOTOR_CATEGORY" : "MentorBit Motores",
+    "MENTORBIT_SCREENS_CATEGORY" : "MentorBit Pantallas",
+    "MENTORBIT_DISPLAY_CATEGORY" : "MentorBit Display",
+    "MENTORBIT_RTCSD_CATEGORY" : "MentorBit RTC y SD",
     "LEDControl": "%2 LED de color %1",
     "LEDRGBControl" : "Fijar LED RGB con Rojo %1, Verde %2 y Azul %3",
     "ZumbadorControl" : "Hacer sonar zumbador con frecuencia %1 durante %2 millisegundos",

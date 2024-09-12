@@ -18,6 +18,12 @@ function registerBlocksMessages (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
+            "MENTORBIT_BASE_CATEGORY" : "MentorBit Base",
+            "MENTORBIT_SENSOR_CATEGORY" : "MentorBit Sensores",
+            "MENTORBIT_MOTOR_CATEGORY" : "MentorBit Motores",
+            "MENTORBIT_SCREENS_CATEGORY" : "MentorBit Pantallas",
+            "MENTORBIT_DISPLAY_CATEGORY" : "MentorBit Display",
+            "MENTORBIT_RTCSD_CATEGORY" : "MentorBit Rtc y SD",
             "LEDControl": "%2 LED de color %1",
             "LEDRGBControl" : "Fijar LED RGB con Rojo %1, Verde %2 y Azul %3",
             "ZumbadorControl" : "Hacer sonar zumbador con frecuencia %1 durante %2 millisegundos",
@@ -48,6 +54,12 @@ function registerBlocksMessages (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
+            "MENTORBIT_BASE_CATEGORY" : "MentorBit Base",
+            "MENTORBIT_SENSOR_CATEGORY" : "MentorBit Sensors",
+            "MENTORBIT_MOTOR_CATEGORY" : "MentorBit Motors",
+            "MENTORBIT_SCREENS_CATEGORY" : "MentorBit Screens",
+            "MENTORBIT_DISPLAY_CATEGORY" : "MentorBit Display",
+            "MENTORBIT_RTCSD_CATEGORY" : "MentorBit RTC y SD",
             "LEDControl": "%2 LED color %1",
             "LEDRGBControl": "Set RGB LED with Red %1, Green %2, and Blue %3",
             "ZumbadorControl": "Make the buzzer sound at frequency %1 for %2 milliseconds",
@@ -78,6 +90,12 @@ function registerBlocksMessages (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales["ru"],
         {
+            "MENTORBIT_BASE_CATEGORY": "MentorBit База",
+            "MENTORBIT_SENSOR_CATEGORY": "MentorBit Датчики",
+            "MENTORBIT_MOTOR_CATEGORY": "MentorBit Моторы",
+            "MENTORBIT_SCREENS_CATEGORY": "MentorBit Экраны",
+            "MENTORBIT_DISPLAY_CATEGORY": "MentorBit Дисплей",
+            "MENTORBIT_RTCSD_CATEGORY": "MentorBit RTC и SD",
             "LEDControl": "%2 светодиод цвет %1",
             "LEDRGBControl": "Установить RGB светодиод с красным %1, зеленым %2 и синим %3",
             "ZumbadorControl": "Включить зуммер на частоте %1 на %2 миллисекунд",
@@ -108,6 +126,12 @@ function registerBlocksMessages (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"],
         {
+            "MENTORBIT_BASE_CATEGORY": "MentorBit 基礎",
+            "MENTORBIT_SENSOR_CATEGORY": "MentorBit 傳感器",
+            "MENTORBIT_MOTOR_CATEGORY": "MentorBit 馬達",
+            "MENTORBIT_SCREENS_CATEGORY": "MentorBit 屏幕",
+            "MENTORBIT_DISPLAY_CATEGORY": "MentorBit 顯示",
+            "MENTORBIT_RTCSD_CATEGORY": "MentorBit RTC 和 SD",
             "LEDControl": "%2 LED 顏色 %1",
             "LEDRGBControl": "設置 RGB LED，紅色 %1，綠色 %2，藍色 %3",
             "ZumbadorControl": "以頻率 %1 使蜂鳴器響起 %2 毫秒",
@@ -138,6 +162,12 @@ function registerBlocksMessages (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
+            "MENTORBIT_BASE_CATEGORY": "MentorBit 基础",
+            "MENTORBIT_SENSOR_CATEGORY": "MentorBit 传感器",
+            "MENTORBIT_MOTOR_CATEGORY": "MentorBit 马达",
+            "MENTORBIT_SCREENS_CATEGORY": "MentorBit 屏幕",
+            "MENTORBIT_DISPLAY_CATEGORY": "MentorBit 显示",
+            "MENTORBIT_RTCSD_CATEGORY": "MentorBit RTC 和 SD",
             "LEDControl": "%2 LED 颜色 %1",
             "LEDRGBControl": "设置 RGB LED，红色 %1，绿色 %2，蓝色 %3",
             "ZumbadorControl": "以频率 %1 使蜂鸣器响起 %2 毫秒",

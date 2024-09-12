@@ -4,7 +4,7 @@
 function registerToolboxs () {
 
     return `
-    <category name="MentorBit Base" id="ARDUINO_MENTORBIT_BASE_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF">
+    <category name="%{BKY_MENTORBIT_BASE_CATEGORY}" id="ARDUINO_MENTORBIT_BASE_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF">
         <block type="deviceMentorBit_LEDControl"></block>
         <block type="deviceMentorBit_LEDRGBControl"></block>
         <block type="deviceMentorBit_ZumbadorControl">
@@ -23,7 +23,7 @@ function registerToolboxs () {
         <block type="deviceMentorBit_PotenciometroControl"></block>
     </category>
 
-    <category name="MentorBit Sensores" id="ARDUINO_MENTORBIT_SENSORS_CATEGORY" colour="#3869f8" secondaryColour="#3869f8">
+    <category name="%{BKY_MENTORBIT_SENSOR_CATEGORY}" id="ARDUINO_MENTORBIT_SENSORS_CATEGORY" colour="#3869f8" secondaryColour="#3869f8">
         <block type="deviceMentorBit_LDRControl"></block>
         <block type="deviceMentorBit_MQControl"></block>
         <block type="deviceMentorBit_DHTControl"></block>
@@ -31,7 +31,7 @@ function registerToolboxs () {
         <block type="deviceMentorBit_DS18B20Control"></block>
     </category>
 
-    <category name="MentorBit Motores" id="ARDUINO_MENTORBIT_ENGINES_CATEGORY" colour="#b39ddb" secondaryColour="#b39ddb">
+    <category name="%{BKY_MENTORBIT_MOTOR_CATEGORY}" id="ARDUINO_MENTORBIT_ENGINES_CATEGORY" colour="#b39ddb" secondaryColour="#b39ddb">
         <block type="deviceMentorBit_MotorDCControl">
             <value name="deviceMentorBit_MotorDCControl_Intensity">
                 <shadow type="math_number">
@@ -55,7 +55,7 @@ function registerToolboxs () {
         </block>
     </category>
 
-    <category name="MentorBit Pantallas" id="ARDUINO_MENTORBIT_ENGINES_CATEGORY" colour="#0aad80" secondaryColour="#0aad80">
+    <category name="%{BKY_MENTORBIT_SCREENS_CATEGORY}" id="ARDUINO_MENTORBIT_ENGINES_CATEGORY" colour="#0aad80" secondaryColour="#0aad80">
         <block type="deviceMentorBit_LCDScreenControl" id="deviceMentorBit_LCDScreenControl">
             <value name="deviceMentorBit_LCDScreenControl_Message">
                 <shadow type="text">
@@ -99,7 +99,7 @@ function registerToolboxs () {
         <block type="deviceMentorBit_OLEDScreenClear"></block>
     </category>
 
-    <category name="MentorBit Display" id="ARDUINO_MENTORBIT_DISPLAY_CATEGORY" colour="#4fd300" secondaryColour="#4fd300">
+    <category name="%{BKY_MENTORBIT_DISPLAY_CATEGORY}" id="ARDUINO_MENTORBIT_DISPLAY_CATEGORY" colour="#4fd300" secondaryColour="#4fd300">
         <block type="deviceMentorBit_Display7Control">
             <value name="deviceMentorBit_Display7Control_Number">
                 <shadow type="math_number">
@@ -110,7 +110,7 @@ function registerToolboxs () {
         <block type="deviceMentorBit_Display7Clear"></block>
     </category>
 
-    <category name="MentorBit RTC y SD" id="ARDUINO_MENTORBIT_RTCySD_CATEGORY" colour="#ffd740" secondaryColour="#ffd740">
+    <category name="%{BKY_MENTORBIT_RTCSD_CATEGORY}" id="ARDUINO_MENTORBIT_RTCySD_CATEGORY" colour="#ffd740" secondaryColour="#ffd740">
         <block type="deviceMentorBit_RTCControl">
             <value name="deviceMentorBit_RTCControl_Hour">
                 <shadow type="math_number">
@@ -155,40 +155,6 @@ function registerToolboxs () {
         </block>
     </category>
     `;
-    return `
-<category name="%{BKY_ARDUINOCHUCHUBOT_CATEGORY}" id="ARDUINOCHUCHUBOT_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF">
-    <block type="deviceDemo_button"></block>
-    <block type="deviceDemo_ultrasonic"></block>
-    <block type="deviceDemo_rgb">
-        <value name="ALL">
-            <shadow type="math_number">
-                <field name="NUM">4</field>
-            </shadow>
-        </value>
-        <value name="POS">
-            <shadow type="math_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-        <value name="R">
-            <shadow type="math_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-        <value name="G">
-            <shadow type="math_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-        <value name="B">
-            <shadow type="math_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-    </block>
-</category>
-`;
-
 }
 
 exports = registerToolboxs;
