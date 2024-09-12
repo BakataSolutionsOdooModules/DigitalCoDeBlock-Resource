@@ -16,7 +16,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LEDControl = {
       init: function() {
         this.jsonInit({
-          message0: '%2 LED de color %1',
+          message0: Blockly.Msg.LEDControl,
           args0: [
             {
               type: "field_dropdown",
@@ -48,7 +48,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LEDRGBControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Fijar LED RGB con Rojo %1, Verde %2 y Azul %3',
+          message0: Blockly.Msg.LEDRGBControl,
           args0: [
             {
               type: "field_slider",
@@ -87,7 +87,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_ZumbadorControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Hacer sonar zumbador con frecuencia %1 durante %2 millisegundos',
+          message0: Blockly.Msg.ZumbadorControl,
           args0: [
             {
               type: "input_value",
@@ -116,7 +116,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_PulsadorControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura pulsador conectado a pin %1 en configuración normalmente %2',
+          message0: Blockly.Msg.PulsadorControl,
           args0: [
             {
               type: 'field_dropdown',
@@ -159,7 +159,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_PotenciometroControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura potenciometro',
+          message0: Blockly.Msg.PotenciometroControl,
           colour: COLOR.base,
           extensions: ['output_number']
         });
@@ -172,7 +172,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LDRControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura del LDR',
+          message0: Blockly.Msg.LDRControl,
           colour: COLOR.sensor,
           extensions: ['output_number']
         });
@@ -182,7 +182,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_MQControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura del MQ',
+          message0: Blockly.Msg.MQControl,
           colour: COLOR.sensor,
           extensions: ['output_number']
         });
@@ -192,7 +192,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_DHTControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura de %1 del DHT',
+          message0: Blockly.Msg.DHTControl,
           args0: [
             {
               type: 'field_dropdown',
@@ -212,7 +212,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_UltraSonidosControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Distancia del ultrasonidos HC-SR04 en cm',
+          message0: Blockly.Msg.UltraSonidosControl,
           colour: COLOR.sensor,
           extensions: ['output_number']
         });
@@ -222,7 +222,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_DS18B20Control = {
       init: function() {
         this.jsonInit({
-          message0: 'Lectura del DS18B20',
+          message0: Blockly.Msg.DS18B20Control,
           colour: COLOR.sensor,
           extensions: ['output_number']
         });
@@ -235,7 +235,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_MotorDCControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Mover motor de Corriente Continua con intensidad %1 en sentido %2',
+          message0: Blockly.Msg.MotorDCControl,
           args0 : [
             {
               type: "input_value",
@@ -271,7 +271,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_MotorStepsControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Mover motor de Paso a Paso %1 pasos en sentido %2',
+          message0: Blockly.Msg.MotorStepsControl,
           args0 : [
             {
               type: "input_value",
@@ -307,7 +307,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_MotorServoControl = {
       init: function() {
         this.jsonInit({
-          message0: "Mover motor servo %1 grados",
+          message0: Blockly.Msg.MotorServoControl,
           args0 : [
             {
               type: "input_value",
@@ -336,7 +336,7 @@ function registerBlocks (Blockly) {
 
       init : function(){
         this.jsonInit({
-          message0: 'Mostrar %1 en pantalla LCD en la columna %2 y fila %3 %4',
+          message0: Blockly.Msg.LCDScreenControl,
           args0: [
             {
               type: "input_value",
@@ -354,8 +354,8 @@ function registerBlocks (Blockly) {
               type: "field_dropdown",
               name: "deviceMentorBit_LCDScreenControl_Cleaning",
               options: [
-                ['LIMPIANDO ANTES DE MOSTRAR', '0'],
-                ['DEJANDO MENSAJES ACTUALES', '1']
+                [ Blockly.Msg.LCDSCreenControl_Opt1, '0'],
+                [ Blockly.Msg.LCDSCreenControl_Opt2, '1']
               ]
             },
           ],
@@ -385,7 +385,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_LCDScreenClear = {
       init: function() {
         this.jsonInit({
-          message0: "Limpiar pantalla LCD"
+          message0: Blockly.Msg.LCDScreenClear
         })
         // this.appendDummyInput('LCDScreenClear')
         //   .appendField('Limpiar pantalla LCD');
@@ -401,7 +401,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_OLEDScreenControl = {
       init: function() {
         this.jsonInit({
-          message0: 'Mostrar %1 en pantalla OLED en la columna %2 y fila %3 %4, con tamaño de letra %5',
+          message0: Blockly.Msg.OLEDScreenControl,
           args0: [
             {
               type: "input_value",
@@ -419,8 +419,8 @@ function registerBlocks (Blockly) {
               type: "field_dropdown",
               name: "deviceMentorBit_OLEDScreenControl_Cleaning",
               options: [
-                ['LIMPIANDO ANTES DE MOSTRAR', '0'],
-                ['DEJANDO MENSAJES ACTUALES', '1']
+                [ Blockly.Msg.LCDSCreenControl_Opt1, '0'],
+                [ Blockly.Msg.LCDSCreenControl_Opt2, '1']
               ]
             },
             {
@@ -454,7 +454,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_OLEDScreenClear = {
       init: function() {
         this.jsonInit({
-          message0 : "Limpiar pantalla OLED"
+          message0 : Blockly.Msg.OLEDScreenClear
         });
         // this.appendDummyInput('OLEDScreenClear')
         //   .appendField('Limpiar pantalla OLED');
@@ -473,7 +473,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_Display7Control = {
       init: function() {
         this.jsonInit({
-          message0 : "Mostrar %1 en el display 7 segmentos",
+          message0 : Blockly.Msg.Display7Control,
           args0 : [
             {
               type: "input_value",
@@ -498,7 +498,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_Display7Clear = {
       init: function() {
         this.jsonInit({
-          message0 : 'Limpiar display 7 segmentos'
+          message0 : Blockly.Msg.Display7Clear
         });
         // this.appendDummyInput('Display7Clear')
         //   .appendField('Limpiar display 7 segmentos');
@@ -518,7 +518,7 @@ function registerBlocks (Blockly) {
       init: function() {
         //field_date
         this.jsonInit({
-          message0: 'Ajustar hora del RTC a las %1 : %2 del %3/%4/%5',
+          message0: Blockly.Msg.RTCControl,
           args0: [
             {
               type : "input_value",
@@ -592,7 +592,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_RTCRead = {
       init: function() {
         this.jsonInit({
-          message0: 'Obtener fecha y hora del RTC',
+          message0: Blockly.Msg.RTCRead,
           colour: COLOR.others,
           extensions: ['output_string']
         });
@@ -602,7 +602,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_SDControl = {
       init: function(){
         this.jsonInit({
-          message0: 'Guardar %1 en archivo %2 de la tarjeta MicroSD',
+          message0: Blockly.Msg.SDControl,
           args0: [
             {
               type: "input_value",
@@ -626,7 +626,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.deviceMentorBit_SDRead = {
       init: function(){
         this.jsonInit({
-          message0: 'Leer del archivo %1 de la tarjeta MicroSD',
+          message0: Blockly.Msg.SDRead,
           args0: [
             {
               type: "input_value",
