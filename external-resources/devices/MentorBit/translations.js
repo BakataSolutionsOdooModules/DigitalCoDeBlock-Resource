@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "MentorBit.name": "MentorBit",
+            "MentorBit.description": "MentorBit desarrollado por Digital CodeSign. Introduce bloques Scratch blocks para controlar MentorBit."
+        },
         "en": {
             "MentorBit.name": "MentorBit",
             "MentorBit.description": "MentorBit developed by Digital CodeSign. It incorporates Scratch blocks to manage MentorBit."
