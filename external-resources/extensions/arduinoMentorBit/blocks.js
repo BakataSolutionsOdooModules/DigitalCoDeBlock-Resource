@@ -9,6 +9,7 @@ function registerBlocks (Blockly) {
       engine : "#b39ddb",
       screen : "#0aad80",
       display : "#4fd300",
+      ports : "#fd3af2",
       others : "#ffd740",
     }
 
@@ -138,6 +139,7 @@ function registerBlocks (Blockly) {
           colour: COLOR.base,
           extensions: ['output_number']
         });
+
         // this.appendValueInput('Pulsador')
         //   .appendField('Lectura pulsador conectado a pin')
         //   .appendField(new Blockly.FieldDropdown([
@@ -510,7 +512,165 @@ function registerBlocks (Blockly) {
         this.setColour(COLOR.display);
       }
     }
-    
+
+    ///////////////////////////////////////////////////////////////////////
+    /// Puertos
+
+    // Blockly.Blocks.deviceMentorBit_PortsControl = {
+    //   init: function(){
+    //     this.jsonInit({
+    //       message0: Blockly.Msg.PortsControl,
+    //       args0 : [
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsControl_Pin",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt4, '3']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt5, '4']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt6, '5']
+    //           ]
+    //         },
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsControl_Port",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //           ]
+    //         },
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsControl_State",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_State1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_State2, '1']
+    //           ]
+    //         }
+    //       ]
+    //     });
+
+    //     this.setInputsInline(true);
+    //     this.setPreviousStatement(true, null);
+    //     this.setNextStatement(true, null);
+    //     this.setTooltip('Para controlar los puertos genéricos y establecerlos en encendido o apagado');
+    //     this.setHelpUrl('www.google.es');
+    //     this.setColour(COLOR.ports);
+    //   }
+    // }
+
+    // Blockly.Blocks.deviceMentorBit_PortsRead = {
+    //   init: function(){
+    //     this.jsonInit({
+    //       message0: Blockly.Msg.PortsRead,
+    //       args0 : [
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsRead_Pin",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt4, '3']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt5, '4']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt6, '5']
+    //           ]
+    //         },
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsRead_Port",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //           ]
+    //         }
+    //       ],
+    //       colour : COLOR.ports,
+    //       extensions: ['output_number']
+    //     });
+    //   }
+    // }
+
+    // Blockly.Blocks.deviceMentorBit_PortsToPWM = {
+    //   init: function(){
+    //     this.jsonInit({
+    //       message0: Blockly.Msg.PortsToPWM,
+    //       args0 : [
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsToPWM_Pin",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt4, '3']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt5, '4']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt6, '5']
+    //           ]
+    //         },
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsToPWM_Port",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //           ]
+    //         },
+    //         {
+    //           type: "input_field",
+    //           name: "deviceMentorBit_PortstoPWM_Value"
+    //         }
+    //       ]
+    //     });
+
+    //     this.setInputsInline(true);
+    //     this.setPreviousStatement(true, null);
+    //     this.setNextStatement(true, null);
+    //     this.setTooltip('Para mandar los datos de los puertos a PWM');
+    //     this.setHelpUrl('www.google.es');
+    //     this.setColour(COLOR.ports);
+    //   }
+    // }
+
+    // Blockly.Blocks.deviceMentorBit_PortsReadAnalog = {
+    //   init: function(){
+    //     this.jsonInit({
+    //       message0: Blockly.Msg.PortsReadAnalog,
+    //       args0 : [
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsRead_Pin",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt4, '3']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt5, '4']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt6, '5']
+    //           ]
+    //         },
+    //         {
+    //           type: "field_dropdown",
+    //           name: "deviceMentorBit_PortsRead_Port",
+    //           options: [
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt1, '0'],
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt2, '1']
+    //             [ Blockly.Msg.deviceMentorBit_PortsControl_Pin_Opt3, '2']
+    //           ]
+    //         }
+    //       ],
+    //       colour : COLOR.ports,
+    //       extensions: ['output_number']
+    //     })
+    //   }
+    // }
+
+
     ///////////////////////////////////////////////////////////////////////
     /// RTC y SD
 

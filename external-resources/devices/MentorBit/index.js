@@ -4,7 +4,7 @@ const MentorBit = formatMessage => ({ // M
         default: 'MentorBit' // M
     }),
     deviceId: 'mentorbit_arduino', // M
-    manufactor: 'Digital CodeSign', // M
+    manufactor: 'Digital Codesign', // M
     learnMore: '', // A link you can learn more about the device
     typeList: ['arduino'], // M
     iconURL: 'assets/deviceMentorBit.png', // M
@@ -36,7 +36,7 @@ const MentorBitArduino = formatMessage => { // M
     const device = MentorBit(formatMessage);
     device.defaultBaudRate = '9600';
     device.deviceId = 'MentorBit_arduinoMega2560'; // M
-    device.programMode = ['upload'];
+    device.programMode = ['realtime','upload'];
     device.deviceExtensions = ['arduinoMentorBit']; // M // Encontrable en "./../../extensions/<device.deviceExtensiones>"
     device.deviceExtensionsCompatible = 'arduinoMega2560';
     device.hide = true;
