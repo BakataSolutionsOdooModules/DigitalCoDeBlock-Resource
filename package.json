@@ -12,12 +12,12 @@
     "i18n-update": "./script/i18n/update-translations.js"
   },
   "scripts": {
-    "fetch": "rimraf external-resources download && node script/download.js --repo=openblockcc/external-resources-v3 --plat=github",
+    "fetch": "rimraf external-resources download && node script/download.js --repo=BakataSolutionsOdooModules/DigitalCoDeBlock-Resource --plat=github",
     "start": "node ./test/start-server.js",
     "start:clear": "rimraf ../.openblockData/external-resources && node ./test/start-server.js",
     "clean": "rimraf external-resources dist translation download ../.openblockData/external-resources",
-    "build:extension": "node script/generate-extension-page.js --url=https://openblockcc.github.io/external-resources/",
-    "build:device": "node script/generate-device-page.js --url=https://openblockcc.github.io/external-resources/",
+    "build:extension": "node script/generate-extension-page.js --url=https://BakataSolutionsOdooModules.github.io/external-resources/",
+    "build:device": "node script/generate-device-page.js --url=https://BakataSolutionsOdooModules.github.io/external-resources/",
     "build": "rimraf dist && npm run build:extension && npm run build:device",
     "deploy": "npm run fetch && npm run build",
     "lint": "eslint ./",
