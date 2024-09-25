@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "mfrc522.name": "MFRC-522 Module",
+            "mfrc522.description": "13.56MHz radio frequency identification module using spi interface."
+        },
         "en": {
             "mfrc522.name": "MFRC-522 Module",
             "mfrc522.description": "13.56MHz radio frequency identification module using spi interface."
@@ -32,6 +36,30 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "MFRC522_CATEGORY": "MFRC522",
+            "MFRC522_DATATYPE_NUBMER": "number",
+            "MFRC522_DATATYPE_STRING": "string",
+            "MFRC522_GETBLOCKDATA": "mfrc522 block data (type %1)",
+            "MFRC522_GETBLOCKDATA_TOOLTIP": "String length less than 16 byte.",
+            "MFRC522_GETCARDTYPENAME": "mfrc522 get card type name",
+            "MFRC522_GETCARDUID": "mfrc522 get card UID",
+            "MFRC522_HALT": "mfrc522 halt",
+            "MFRC522_INIT": "init mfrc522 pin CS %1 RST %2",
+            "MFRC522_ISNEWCARDPRESENT": "new card present?",
+            "MFRC522_NUMBERTOHEXSTRING": "mfrc522 %1 to hex string",
+            "MFRC522_PRINTSECTORDATA": "mfrc522 print sector %1 data",
+            "MFRC522_READBLOCKDATA": "mfrc522 read block %1",
+            "MFRC522_READCARDSERIAL": "mfrc522 successfully read card serial number?",
+            "MFRC522_SETKEY": "mfrc522 set secret key %1",
+            "MFRC522_VERIFICATIONKEY": "mfrc522 verification block %1 key is correct?",
+            "MFRC522_WRITEBLOCKDATA": "mfrc522 write %1 to block %2 (type %3)",
+            "MFRC522_WRITEKEYTOSECTOR": "mfrc522 write key %1 to sector %2"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "MFRC522_CATEGORY": "MFRC522",

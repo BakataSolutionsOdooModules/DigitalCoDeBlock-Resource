@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "ds18b20.name": "DS18B20 Sensor",
+            "ds18b20.description": "Single bus digital temperature sensor based on DS18B20."
+        },
         "en": {
             "ds18b20.name": "DS18B20 Sensor",
             "ds18b20.description": "Single bus digital temperature sensor based on DS18B20."
@@ -32,6 +36,16 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "DS18B20_CATEGORY": "DS18B20",
+            "DS18B20_GETTEMPERATURE": "ds18b20 %1 temperatures %2",
+            "DS18B20_INIT": "init ds18b20 pin %1 quantity %2",
+            "DS18B20_READALLTEMPERATURES": "ds18b20 read all temperatures"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "DS18B20_CATEGORY": "DS18B20",

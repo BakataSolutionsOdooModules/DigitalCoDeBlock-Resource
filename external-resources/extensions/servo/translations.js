@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "servo.name": "Servo",
+            "servo.description": "Classic servo support for microbit."
+        },
         "en": {
             "servo.name": "Servo",
             "servo.description": "Classic servo support for microbit."
@@ -32,6 +36,14 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "SERVO_CATEGORY": "Servo",
+            "SERVO_WRITE": "set servo pin %1 out %2"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "SERVO_CATEGORY": "Servo",

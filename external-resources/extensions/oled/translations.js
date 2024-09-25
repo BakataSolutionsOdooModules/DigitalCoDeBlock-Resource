@@ -28,6 +28,39 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
+        {
+            "OLED_CATEGORY": "OLED",
+            "OLED_CLEAR": "clear oled",
+            "OLED_COLOR_BLACK": "black",
+            "OLED_COLOR_INVERSE": "inverse",
+            "OLED_COLOR_WHITE": "white",
+            "OLED_DRAWCIRCLE": "oled draw circle x: %1 y: %2 radius %3 color %4",
+            "OLED_DRAWLINE": "oled draw line x0: %1 y0: %2, x1: %3 y1：%4 color %5",
+            "OLED_DRAWRECT": "oled draw rect x: %1 y: %2 width %3 height %4 color %5",
+            "OLED_DRAWROUNDRECT": "oled draw round rect x: %1 y: %2 width %3 height %4 radius %5 color %6",
+            "OLED_DRAWTRIANGLE": "oled draw triangle x0: %1 y0: %2, x1: %3 y1: %4, x2: %5 y2: %6 color %7",
+            "OLED_EOL_NOWARP": "no-warp",
+            "OLED_EOL_WARP": "warp",
+            "OLED_FILLCIRCLE": "oled fill circle x: %1 y: %2 radius %3 color %4",
+            "OLED_FILLRECT": "oled fill rect x: %1 y: %2 width %3 height %4 color %5",
+            "OLED_FILLROUNDRECT": "oled fill round rect x: %1 y: %2 width %3 height %4 radius %5 color %6",
+            "OLED_FILLTRIANGLE": "oled fill triangle x0: %1 y0: %2, x1: %3 y1: %4, x2: %5 y2: %6 color %7",
+            "OLED_INIT": "init oled width %1 height %2 I2C address %3",
+            "OLED_PRINT": "oled print %1 %2",
+            "OLED_REFRESH": "refresh oled display",
+            "OLED_SCROLL_DIAGLEFT": "diag left",
+            "OLED_SCROLL_DIAGRIGHT": "diag right",
+            "OLED_SCROLL_LEFT": "left",
+            "OLED_SCROLL_RIGHT": "right",
+            "OLED_SETCURSOR": "set oled cursor x: %1 y: %2",
+            "OLED_SETTEXT": "set oled text size %1 color %2 background color %3",
+            "OLED_STARTSCROLL": "oled start scroll %1 y0: %2 y1: %3",
+            "OLED_STOPSCROLL": "oled stop scroll"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "OLED_CATEGORY": "OLED",

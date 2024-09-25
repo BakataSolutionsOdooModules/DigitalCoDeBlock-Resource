@@ -32,6 +32,27 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
+        {
+            "SDCARD_CATEGORY": "SD Card",
+            "SDCARD_CLOSEFILE": "sd card close file",
+            "SDCARD_CREATEFILE": "sd card create file %1",
+            "SDCARD_DELETEFILE": "sd card delet file %1",
+            "SDCARD_EOL_NOWARP": "no-warp",
+            "SDCARD_EOL_WARP": "warp",
+            "SDCARD_FILEDATAAVAILABLE": "sd card file data available",
+            "SDCARD_INIT": "init sd card pin CS %1",
+            "SDCARD_ISFILEEXISTS": "sd card file %1 exists?",
+            "SDCARD_MODE_READ": "read only",
+            "SDCARD_MODE_READWRITE": "read & write",
+            "SDCARD_OPENFILE": "sd card open file %1 mode %2",
+            "SDCARD_OPENFILE_TOOLTIP": "If file not exists, it will be created automatically.",
+            "SDCARD_PRINT": "print %1 %2 to file",
+            "SDCARD_READFILEDATA": "sd card read file data"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "SDCARD_CATEGORY": "SD Card",

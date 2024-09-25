@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "max6675.name": "MAX6675 Module",
+            "max6675.description": "K-type thermocouple temperature measurement module based on MAX6675, the measurement range is 0 ~ 1024 ℃"
+        },
         "en": {
             "max6675.name": "MAX6675 Module",
             "max6675.description": "K-type thermocouple temperature measurement module based on MAX6675, the measurement range is 0 ~ 1024 ℃"
@@ -32,6 +36,15 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "MAX6675_CATEGORY": "MAX6675",
+            "MAX6675_INIT": "init max6675 pin DO %1 CLK %2 CS %3",
+            "MAX6675_READTEMPERATURE": "max6675 read temperature %1"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "MAX6675_CATEGORY": "MAX6675",

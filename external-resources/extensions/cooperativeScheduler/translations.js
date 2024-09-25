@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "cooperativeScheduler.name": "Cooperative Scheduler",
+            "cooperativeScheduler.description": "Allow Arduino run multiple tasks."
+        },
         "en": {
             "cooperativeScheduler.name": "Cooperative Scheduler",
             "cooperativeScheduler.description": "Allow Arduino run multiple tasks."
@@ -32,6 +36,16 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "COOPERATIVESCHEDULER_CATEGORY": "Cooperative scheduler",
+            "COOPERATIVESCHEDULER_SETUP": "task %1 setup",
+            "COOPERATIVESCHEDULER_SLEEP": "task delay %1 ms",
+            "COOPERATIVESCHEDULER_START": "start cooperative scheduler"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "COOPERATIVESCHEDULER_CATEGORY": "Cooperative scheduler",

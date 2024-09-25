@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "chineseTTS.name": "Chinese TTS",
+            "chineseTTS.description": "Text to speech module based on SYN6288, support Chinese and English letters and numbers."
+        },
         "en": {
             "chineseTTS.name": "Chinese TTS",
             "chineseTTS.description": "Text to speech module based on SYN6288, support Chinese and English letters and numbers."
@@ -32,6 +36,23 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "CHINESETTS_CATEGORY": "Chinese TTS",
+            "CHINESETTS_INIT": "init chinese TTS module pin RX %1 TX %2",
+            "CHINESETTS_PLAYSOUND": "chinese TTS module play sound %1",
+            "CHINESETTS_PLAYSOUNDUNTILLFINISH": "chinese TTS module play sound %1 untill finish",
+            "CHINESETTS_SAY": "chinese TTS module say %1",
+            "CHINESETTS_SAYUNTILLFINISH": "chinese TTS module say %1 untill finish",
+            "CHINESETTS_SETPOWERONPROMPT": "chinese TTS module set sound of power on prompt %1",
+            "CHINESETTS_SETSPEECHRATE": "chinese TTS module set speech rate %1",
+            "CHINESETTS_SETVOLUME": "chinese TTS module set volume %1",
+            "CHINESETTS_STATE_OFF": "off"
+        }
+    );
+
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "CHINESETTS_CATEGORY": "Chinese TTS",

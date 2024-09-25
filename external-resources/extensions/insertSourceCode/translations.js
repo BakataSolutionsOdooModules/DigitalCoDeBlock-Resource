@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "insertSourceCode.name": "Insert Source Code",
+            "insertSourceCode.description": "Insert the source code directly into the blocks, so that professional users can realize some more advanced functions." 
+        },
         "en": {
             "insertSourceCode.name": "Insert Source Code",
             "insertSourceCode.description": "Insert the source code directly into the blocks, so that professional users can realize some more advanced functions."
@@ -32,6 +36,20 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "INSERTSOURCECODE_BOOLEANBLOCK": "insert source code %1",
+            "INSERTSOURCECODE_CATEGORY": "Insert Source Code",
+            "INSERTSOURCECODE_COMMANDBLOCK": "insert source code %1 %2",
+            "INSERTSOURCECODE_DONTESCAPE": "don\"t escape newline",
+            "INSERTSOURCECODE_ESCAPE": "escape newline",
+            "INSERTSOURCECODE_INSERTINDEFINEAREA": "insert source code %1 in define area %2",
+            "INSERTSOURCECODE_INSERTININCLUDEAREA": "insert source code %1 in include area %2",
+            "INSERTSOURCECODE_ROUNDBLOCK": "insert source code %1"
+        }
+    );
+
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "INSERTSOURCECODE_BOOLEANBLOCK": "insert source code %1",

@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "dht.name": "DHT Sensor",
+            "dht.description": "DHT Temperature and humidity sensor module."
+        },
         "en": {
             "dht.name": "DHT Sensor",
             "dht.description": "DHT Temperature and humidity sensor module."
@@ -32,6 +36,16 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "DHT_CATEGORY": "DHT",
+            "DHT_INIT": "init dht %1 pin %2 model %3",
+            "DHT_READ_HUMIDITY": "dht %1 read humidity",
+            "DHT_READ_TEMPERATURE": "dht %1 read temperature %2"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "DHT_CATEGORY": "DHT",

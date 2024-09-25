@@ -32,6 +32,19 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
+        {
+            "SOFTWARESERIAL_AVAILABLE": "software serial %1 available data length",
+            "SOFTWARESERIAL_BEGIN": "software serial %1 RX pin %2 TX pin %3 begin baudrate %4",
+            "SOFTWARESERIAL_CATEGORY": "software serial",
+            "SOFTWARESERIAL_NOWARP": "no-warp",
+            "SOFTWARESERIAL_PRINT": "software serial %1 print %2 %3",
+            "SOFTWARESERIAL_READABYTE": "software serial %1 read a byte",
+            "SOFTWARESERIAL_WARP": "warp"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "SOFTWARESERIAL_AVAILABLE": "software serial %1 available data length",

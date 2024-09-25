@@ -32,6 +32,15 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "MORECOMMENTS_BRANCHBLOCK": "comments: %1",
+            "MORECOMMENTS_CATEGORY": "More Comments",
+            "MORECOMMENTS_COMMANDBLOCK": "comments: %1"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "MORECOMMENTS_BRANCHBLOCK": "comments: %1",

@@ -32,6 +32,15 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
+        {
+            "SHARPIR_CATEGORY": "Sharp IR",
+            "SHARPIR_INIT": "init sharp IR sensor %1 pin %2 model %3",
+            "SHARPIR_READDISTANCE": "sharp IR sensor %1 read distance"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "SHARPIR_CATEGORY": "Sharp IR",

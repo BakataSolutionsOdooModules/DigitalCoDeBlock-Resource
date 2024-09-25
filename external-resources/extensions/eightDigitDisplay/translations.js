@@ -32,6 +32,17 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "EIGHTDIGITDISPLAY_CATEGORY": "8-Digit Display",
+            "EIGHTDIGITDISPLAY_CLEAR": "clear 8-digit display",
+            "EIGHTDIGITDISPLAY_DISPLAYNUMBER": "8-digit display show number %1 decimal %2",
+            "EIGHTDIGITDISPLAY_INIT": "init 8-digit display pin DIN %1 CS %2 CLK %3",
+            "EIGHTDIGITDISPLAY_SETBRIGHTNESS": "set 8-digit display brightness %1"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "EIGHTDIGITDISPLAY_CATEGORY": "8-Digit Display",

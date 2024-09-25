@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "ultrasonic.name": "Ultrasonic",
+            "ultrasonic.description": "Standard ultrasonic distance measurement module."
+        },
         "en": {
             "ultrasonic.name": "Ultrasonic",
             "ultrasonic.description": "Standard ultrasonic distance measurement module."
@@ -32,6 +36,13 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
+    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+        {
+            "ULTRASONIC_CATEGORY": "Ultrasonic",
+            "ULTRASONIC_READ_DISTANCE": "ultrasonic sensor pin TRIG %1 ECHO %2 read distance %3"
+        }
+    );
+
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "ULTRASONIC_CATEGORY": "Ultrasonic",
