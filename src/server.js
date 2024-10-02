@@ -5,6 +5,10 @@ const fetch = require('node-fetch');
 const http = require('http');
 const clc = require('cli-color');
 
+const path = require('node:path'); 
+const fs = require('node:fs');
+
+const ResourceLibrary = require('./library');
 const OpenBlockDevice = require('./device');
 const OpenBlockExtension = require('./extension');
 const {
@@ -144,6 +148,36 @@ class ResourceServer extends Emitter{
                 res.send(this.deviceIndexData[`${locale}`]);
             }
         });
+
+        // Digital CodeBlock uses:
+        this._app.get('/library/add/:api/:owner/:library',  async (req, res) => {
+            console.info(`Received ${req.url}`);
+            const api = req.params.api;
+            let owner = req.params.owner;
+            owner = owner.endsWith(".git") ? owner.replace(".git", "") : owner;
+            const library = req.params.library;
+
+            res.send(
+                await new ResourceLibrary(this._builtinResourcesPath, owner,library, api).start()
+            );
+        });
+
+        this._app.get('/library/remove/:library', async (req, res) => {
+            const library = req.params.library;
+           
+            res.send(
+                await new ResourceLibrary(this._builtinResourcesPath, null,library, null).deleteRepoFiles()
+            );
+        });
+
+        this._app.get('/library', async (req, res) => {
+            
+            const libraryManager = new ResourceLibrary(this._builtinResourcesPath, null, "", null);
+            res.send(
+                await libraryManager.getLoadedLibraries()
+            );
+        });
+        // END
 
         this._server.listen(this._port, this._host, () => {
             console.log(clc.green(`Openblock resource server start successfully, socket listen on: http://${this._host}:${this._port}`));
