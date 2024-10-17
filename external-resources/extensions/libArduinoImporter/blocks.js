@@ -7,11 +7,18 @@
 var options = [['Loading...', 'Loading...']];
 var loadedLibraries =  [['Empty', '']];
 (async function(){
-  options = await getRepositories();
+  try{
+    options = await getRepositories();
+    const _libraries = await getLoadedLibraries();
+    console.log(_libraries);
+    if(_libraries.length) loadedLibraries = _libraries;
+  }
+  catch(error){
+    alert(`Error.${error}`);
+  }
+  
 
-  const _libraries = await getLoadedLibraries();
-  console.log(_libraries);
-  if(_libraries.length) loadedLibraries = _libraries;
+  
 })();
 
 
@@ -25,10 +32,9 @@ async function getLoadedLibraries(){
 
 }
 
-var GITHUB_USER_TOKEN_API = "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";
+var GITHUB_USER_TOKEN_API = ""//"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";
 var askedAPI = window.prompt("[Opcional] Para peticiones ilimitadas, introduzca API Token Github valido ( https://github.com/settings/tokens ):");
-if(askedAPI && askedAPI.length)
-  GITHUB_USER_TOKEN_API = askedAPI;
+GITHUB_USER_TOKEN_API = (askedAPI && askedAPI.length) ? askedAPI : 'anonymous';
 
 function registerBlocks (Blockly) {
     Blockly.Blocks.libArduinoImporter_Input = {
@@ -51,7 +57,7 @@ function registerBlocks (Blockly) {
             this.dynamicDropdownLibrariesValidator.bind(this)
           ), 'libArduinoImporter_Input_LoadedLibraries');
 
-        this.setColour(230);
+        this.setColour("#42CCFF");
         this.setTooltip('');
         this.setHelpUrl('');
             
@@ -75,9 +81,14 @@ function registerBlocks (Blockly) {
         if(value.length){
           const API_LIBRARY_ADD = `http://localhost:20112/library/add/${GITHUB_USER_TOKEN_API}${value}`;  //`https://api.github.com/repos${value.pathname}/contents/src`
           fetch(API_LIBRARY_ADD) //añadimos la libreria
-          .then((_) => {
+          .then((value) => {
+            if(value.status != 200){
+              alert("Ha ocurrido un error adquiriendo la libreria");
+              return;
+            }
             const libraryName = value.split("/").reverse()[0];
             loadedLibraries.push([libraryName, libraryName]) // Lo añadimos al array de librerias cargadas
+            alert(`Se ha instalado con exito la libreria "${libraryName}"`);
           })
           .catch( (_) => {
 
@@ -90,11 +101,15 @@ function registerBlocks (Blockly) {
          
       },
 
-      dynamicDropdownLibrariesValidator : function(value){
-        const indexToRemove = loadedLibraries.findIndex((key) => key[0] == value);
+      dynamicDropdownLibrariesValidator : function(library){
+        const indexToRemove = loadedLibraries.findIndex((key) => key[0] == library);
         console.log(`Hay que eliminar el indice --> ${indexToRemove}`);
-        fetch(`http://localhost:20112/library/remove/${value}`)
-          .then((_) => {
+        fetch(`http://localhost:20112/library/remove/${library}`)
+          .then((value) => {
+            if(value.status != 200){
+              alert("Ha ocurrido un error borrando la libreria");
+              return;
+            }
             const temp = [];
             for(let i= 0; i < loadedLibraries.length; i++){
               if(i == indexToRemove) continue;
@@ -102,6 +117,7 @@ function registerBlocks (Blockly) {
             }
 
             loadedLibraries = temp.length ? temp :  [['Empty', '']];
+            alert(`Se ha eliminado con exito la libreria "${library}"`);
           });
 
         
@@ -114,41 +130,57 @@ function registerBlocks (Blockly) {
 
 var allOptions = null;
 async function getRepositories(){
-  if(!allOptions){
-    const ARDUINO_REPOSITORIES_LIST_URL = "https://api.github.com/repos/arduino/library-registry/contents/repositories.txt"
-    const res = await fetch(ARDUINO_REPOSITORIES_LIST_URL, {
-      headers : {
-        //'Accept': 'application/vnd.github.v3.raw',
-        'Authorization' : `${GITHUB_USER_TOKEN_API ? `Bearer ${GITHUB_USER_TOKEN_API}` : '' }`
+  return new Promise(async (resolve,reject) =>{
+    if(!allOptions){
+      const ARDUINO_REPOSITORIES_LIST_URL = "https://api.github.com/repos/arduino/library-registry/contents/repositories.txt"
+      const res = await fetch(ARDUINO_REPOSITORIES_LIST_URL, {
+        headers : {
+          //'Accept': 'application/vnd.github.v3.raw',
+          'Authorization' : `${GITHUB_USER_TOKEN_API ? `Bearer ${GITHUB_USER_TOKEN_API}` : '' }`
+        }
+      });
+      if(res.status != 200){
+        const statusText = (function getErrorReason(code){
+          switch (code){
+            case 403: 
+              return "Use limit reached";
+            case 401: 
+              return "Your token has been banned from Api Github";
+            default:
+              return res.statusText;
+          }
+            
+        })(res.status);
+        return reject(`Got status code ${res.status}: ${statusText}`);
       }
-    });
-    if(res.status != 200)
-      return reject(`Got status code ${res.status}: ${res.statusText}`);
-  
-    const repos = Base64.decode(JSON.parse(new TextDecoder()
-      .decode(
-        await readAll(
-          res.body.getReader()
+       
+    
+      const repos = Base64.decode(JSON.parse(new TextDecoder()
+        .decode(
+          await readAll(
+            res.body.getReader()
+          )
         )
-      )
-    ).content).split('\n');
+      ).content).split('\n');
+    
+      allOptions = repos
+        .filter((repo) =>{
+          return repo.trim().length > 0;
+        })
+        .map((value, index) => {
+          try{
+            const url = new URL(value);
+            return [url.pathname.split("/").reverse()[0],url.pathname]
+          }
+          catch(error){
+            return;
+          }
+      });
+      console.info("Loaded all Arduino libraries repositories")
+    }
+    return resolve(allOptions);
+  });
   
-    allOptions = repos
-      .filter((repo) =>{
-        return repo.trim().length > 0;
-      })
-      .map((value, index) => {
-        try{
-          const url = new URL(value);
-          return [url.pathname.split("/").reverse()[0],url.pathname]
-        }
-        catch(error){
-          return;
-        }
-    });
-    console.info("Loaded all Arduino libraries repositories")
-  }
-  return allOptions;
   
 }
 

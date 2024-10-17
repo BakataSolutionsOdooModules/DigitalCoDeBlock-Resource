@@ -152,7 +152,8 @@ class ResourceServer extends Emitter{
         // Digital CodeBlock uses:
         this._app.get('/library/add/:api/:owner/:library',  async (req, res) => {
             console.info(`Received ${req.url}`);
-            const api = req.params.api;
+            let api = req.params.api;
+            api = api.toLocaleLowerCase() == 'anonymous' ? '' : api;
             let owner = req.params.owner;
             owner = owner.endsWith(".git") ? owner.replace(".git", "") : owner;
             const library = req.params.library;
