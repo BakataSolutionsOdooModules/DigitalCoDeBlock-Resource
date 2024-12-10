@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "ps2.name": "Control Remoto PS2",
+            "ps2.description": "Control Remoto PS2 inalámbrico con 4 líneas de señal."
+        },
         "en": {
             "ps2.name": "PS2 Remote Control",
             "ps2.description": "PS2 wireless remote controller with 4 signal lines."
@@ -32,24 +36,23 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "PS2_CATEGORY": "PS2",
-            "PS2_CIRCLE": "circle",
-            "PS2_CROSS": "cross",
-            "PS2_DOWN": "down",
-            "PS2_GETBUTTON": "PS2 %1 button is pressed?",
-            "PS2_GETJOYSTICK": "PS2 get joystick %1",
-            "PS2_INIT": "init ps2 receiver pin DIN %1 DOUT %2 CS %3 CLK %4",
-            "PS2_LEFT": "left",
-            "PS2_READDATA": "read PS2 receiver data",
-            "PS2_RIGHT": "right",
+            "PS2_CIRCLE": "círculo",
+            "PS2_CROSS": "equis",
+            "PS2_DOWN": "abajo",
+            "PS2_GETBUTTON": "¿botón PS2 %1 está presionado?",
+            "PS2_GETJOYSTICK": "PS2 coger joystick %1",
+            "PS2_INIT": "iniciar PS2 pin receptor DIN %1 DOUT %2 CS %3 CLK %4",
+            "PS2_LEFT": "izquierda",
+            "PS2_READDATA": "leer datos receptor PS2",
+            "PS2_RIGHT": "derecha",
             "PS2_SELECT": "select",
-            "PS2_SQUARE": "square",
+            "PS2_SQUARE": "cuadrado",
             "PS2_START": "start",
-            "PS2_TRIANGLE": "triangle",
-            "PS2_UP": "up"
+            "PS2_TRIANGLE": "triángulo",
+            "PS2_UP": "arriba"
         }
     );
 

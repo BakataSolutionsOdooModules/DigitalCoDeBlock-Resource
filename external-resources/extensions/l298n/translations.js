@@ -8,7 +8,7 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "l298n.description": "Common high power dual motor drive module."
+            "l298n.description": "Módulo común controlador de motor dual de alta potencia."
         },
         "en": {
             "l298n.description": "Common high power dual motor drive module."
@@ -31,15 +31,14 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "L298N_BACK": "back",
+            "L298N_BACK": "atrás",
             "L298N_CATEGORY": "L298N",
-            "L298N_FORWARD": "foward",
-            "L298N_INIT": "init channel %1 pin IN1 %2 IN2 %3 EN %4",
-            "L298N_RUN": "channel %1 run %2 speed %3",
-            "L298N_STOP": "channel %1 stop"
+            "L298N_FORWARD": "adelante",
+            "L298N_INIT": "iniciar canal %1 pin IN1 %2 IN2 %3 EN %4",
+            "L298N_RUN": "canal %1 ejecutar %2 velocidad %3",
+            "L298N_STOP": "canal %1 detener"
         }
     );
 

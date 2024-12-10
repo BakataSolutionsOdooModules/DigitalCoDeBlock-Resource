@@ -197,7 +197,7 @@ function registerToolboxs () {
     <block type="u8g2_drawString" id="u8g2_drawString">
         <value name="STR">
             <shadow type="text">
-                <field name="TEXT">Hello Openblock</field>
+                <field name="TEXT">Hello Digital Codeblock</field>
             </shadow>
         </value>
         <value name="X">
@@ -226,7 +226,7 @@ function registerToolboxs () {
     <block type="u8g2_print" id="u8g2_print">
         <value name="STR">
             <shadow type="text">
-                <field name="TEXT">Hello Openblock</field>
+                <field name="TEXT">Hello Digital Codeblock</field>
             </shadow>
         </value>
     </block>

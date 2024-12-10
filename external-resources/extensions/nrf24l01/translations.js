@@ -7,6 +7,9 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "nrf24l01.description": "Módulo receptor/transmisor de RF 2.4G."
+        },
         "en": {
             "nrf24l01.description": "2.4G RF transceiver module."
         },
@@ -28,20 +31,19 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "NRF24L01_CATEGORY": "NRF24l01",
-            "NRF24L01_HASDATA": "nrf24l01 received data?",
-            "NRF24L01_INIT": "init nrf24l01 pin CE %1 CSN %2 id %3",
-            "NRF24L01_PARSENUMBER": "nrf24l01 parse number",
-            "NRF24L01_PARSESTRING": "nrf24l01 parse string",
-            "NRF24L01_PARSEVALUE": "nrf24l01 parse value %1",
-            "NRF24L01_READDATA": "nrf24l01 read data",
-            "NRF24L01_SENDNUMBER": "nrf24l01 send number %1 to id %2",
-            "NRF24L01_SENDSTRING": "nrf24l01 send string %1 to id %2",
-            "NRF24L01_SENDVALUE": "nrf24l01 send value %1 = %2 to id %3",
-            "NRF24L01_VALUEAVAILABLE": "nrf24l01 value %1 available?"
+            "NRF24L01_HASDATA": "¿nrf24l01 recibió datos?",
+            "NRF24L01_INIT": "iniciar nrf24l01 pin CE %1 CSN %2 id %3",
+            "NRF24L01_PARSENUMBER": "nrf24l01 parsear número",
+            "NRF24L01_PARSESTRING": "nrf24l01 parsear cadena",
+            "NRF24L01_PARSEVALUE": "nrf24l01 parsear valor %1",
+            "NRF24L01_READDATA": "nrf24l01 leer datos",
+            "NRF24L01_SENDNUMBER": "nrf24l01 enviar número %1 a id %2",
+            "NRF24L01_SENDSTRING": "nrf24l01 enviar cadena %1 a id %2",
+            "NRF24L01_SENDVALUE": "nrf24l01 enviar valor %1 = %2 a id %3",
+            "NRF24L01_VALUEAVAILABLE": "¿nrf24l01 valor %1 disponible?"
         }
     );
 

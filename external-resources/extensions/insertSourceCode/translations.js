@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "insertSourceCode.name": "Insert Source Code",
-            "insertSourceCode.description": "Insert the source code directly into the blocks, so that professional users can realize some more advanced functions." 
+            "insertSourceCode.name": "Insertar Código Fuente",
+            "insertSourceCode.description": "Inserta el código fuente directamente en los bloques, para que los usuarios profesionales puedan realizar algunas funciones más avanzadas."
         },
         "en": {
             "insertSourceCode.name": "Insert Source Code",
@@ -36,19 +36,18 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "INSERTSOURCECODE_BOOLEANBLOCK": "insert source code %1",
-            "INSERTSOURCECODE_CATEGORY": "Insert Source Code",
-            "INSERTSOURCECODE_COMMANDBLOCK": "insert source code %1 %2",
-            "INSERTSOURCECODE_DONTESCAPE": "don\"t escape newline",
-            "INSERTSOURCECODE_ESCAPE": "escape newline",
-            "INSERTSOURCECODE_INSERTINDEFINEAREA": "insert source code %1 in define area %2",
-            "INSERTSOURCECODE_INSERTININCLUDEAREA": "insert source code %1 in include area %2",
-            "INSERTSOURCECODE_ROUNDBLOCK": "insert source code %1"
+            "INSERTSOURCECODE_BOOLEANBLOCK": "insertar código fuente %1",
+            "INSERTSOURCECODE_CATEGORY": "Insertar Código Fuente",
+            "INSERTSOURCECODE_COMMANDBLOCK": "insertar código fuente %1 %2",
+            "INSERTSOURCECODE_DONTESCAPE": "no escapar nueva línea",
+            "INSERTSOURCECODE_ESCAPE": "escapar nueva línea",
+            "INSERTSOURCECODE_INSERTINDEFINEAREA": "insertar código fuente %1 en área de definición %2",
+            "INSERTSOURCECODE_INSERTININCLUDEAREA": "insertar código fuente %1 en área de inclusión %2",
+            "INSERTSOURCECODE_ROUNDBLOCK": "insertar código fuente %1"
         }
     );
-
 
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {

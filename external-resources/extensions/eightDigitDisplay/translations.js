@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "eightDigitDisplay.name": "Visualizador de 8 dígitos",
+            "eightDigitDisplay.description": "Módulo de visualización de 8 dígitos basado en MAX7219."
+        },
         "en": {
             "eightDigitDisplay.name": "8-Digit Display",
             "eightDigitDisplay.description": "8-digit display module based on MAX7219."
@@ -32,14 +36,13 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "EIGHTDIGITDISPLAY_CATEGORY": "8-Digit Display",
-            "EIGHTDIGITDISPLAY_CLEAR": "clear 8-digit display",
-            "EIGHTDIGITDISPLAY_DISPLAYNUMBER": "8-digit display show number %1 decimal %2",
-            "EIGHTDIGITDISPLAY_INIT": "init 8-digit display pin DIN %1 CS %2 CLK %3",
-            "EIGHTDIGITDISPLAY_SETBRIGHTNESS": "set 8-digit display brightness %1"
+            "EIGHTDIGITDISPLAY_CATEGORY": "Visualizador de 8 dígitos",
+            "EIGHTDIGITDISPLAY_CLEAR": "limpiar visualizador de 8 dígitos",
+            "EIGHTDIGITDISPLAY_DISPLAYNUMBER": "visualizador de 8 dígitos muestra número %1 decimal %2",
+            "EIGHTDIGITDISPLAY_INIT": "inicializar visualizador de 8 dígitos en pin DIN %1 CS %2 CLK %3",
+            "EIGHTDIGITDISPLAY_SETBRIGHTNESS": "establecer brillo del visualizador de 8 dígitos %1"
         }
     );
 

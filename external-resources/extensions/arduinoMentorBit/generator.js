@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function registerGenerators (Blockly) {
 
-    function defineHeaders(){
+    function defineHeaders (){
         Blockly.Arduino.definitions_.define_Wire = '#include <Wire.h>';
         Blockly.Arduino.definitions_.define_SoftwareSerial = '#include <SoftwareSerial.h>';
     }
@@ -387,43 +387,6 @@ oled.display();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    /// Puertos
-
-//     Blockly.Arduino.deviceMentorBit_PortsControl = function(){
-//         defineHeaders();
-//         Blockly.Arduino.definitions_.define_constants_Ports = `
-// uint8_t writedigital11 = 35;
-// uint8_t writedigital21 = 36;
-// uint8_t writedigital31 = 37;
-// uint8_t writedigital41 = 38;
-// uint8_t writedigital51 = 11;
-// uint8_t writedigital61 = 12;
-
-// uint8_t writedigital12 = 39;
-// uint8_t writedigital22 = 40;
-// uint8_t writedigital32 = 41;
-// uint8_t writedigital42 = 42;
-// uint8_t writedigital52 = 13;
-// uint8_t writedigital62 = 44;
-
-// uint8_t writedigital13 = 43;
-// uint8_t writedigital23 = 47;
-// uint8_t writedigital33 = 48;
-// uint8_t writedigital43 = 49;
-// uint8_t writedigital53 = 45;
-// uint8_t writedigital63 = 46;
-//         `;
-
-
-
-//         Blockly.Arduino.setups_[`deviceMentorBit_PortsControl`] = `
-//         ToDo
-//         `;
-
-
-//     }
-
-    ///////////////////////////////////////////////////////////////////////
     /// Displays
 
     Blockly.Arduino.deviceMentorBit_Display7Control = function(block){
@@ -628,7 +591,6 @@ String readFromSD(String filename) {
 
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
-
     return Blockly;
 }
 

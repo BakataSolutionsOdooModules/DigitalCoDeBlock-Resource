@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "softwareSerial.name": "Software Serial",
+            "softwareSerial.description": "Permite la comunicación serial en otros pines digitales del Arduino."
+        },
         "en": {
             "softwareSerial.name": "Software Serial",
             "softwareSerial.description": "Allow serial communication on other digital pins of the Arduino."
@@ -32,16 +36,15 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "SOFTWARESERIAL_AVAILABLE": "software serial %1 available data length",
-            "SOFTWARESERIAL_BEGIN": "software serial %1 RX pin %2 TX pin %3 begin baudrate %4",
+            "SOFTWARESERIAL_AVAILABLE": "software serial %1 longitud de datos disponibles",
+            "SOFTWARESERIAL_BEGIN": "software serial %1 pin RX %2 pin TX %3 comenzar tasa de baudios %4",
             "SOFTWARESERIAL_CATEGORY": "software serial",
-            "SOFTWARESERIAL_NOWARP": "no-warp",
-            "SOFTWARESERIAL_PRINT": "software serial %1 print %2 %3",
-            "SOFTWARESERIAL_READABYTE": "software serial %1 read a byte",
-            "SOFTWARESERIAL_WARP": "warp"
+            "SOFTWARESERIAL_NOWARP": "no deformar",
+            "SOFTWARESERIAL_PRINT": "software serial %1 imprimir %2 %3",
+            "SOFTWARESERIAL_READABYTE": "software serial %1 leer byte",
+            "SOFTWARESERIAL_WARP": "deformar"
         }
     );
 

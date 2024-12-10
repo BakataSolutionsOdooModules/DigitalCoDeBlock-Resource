@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "moreComments.name": "Más Comentarios",
+            "moreComments.description": "Permite agregar comentarios en forma de bloques para aumentar la legibilidad del programa."
+        },
         "en": {
             "moreComments.name": "More Comments",
             "moreComments.description": "Allows you to add comments in the form of blocks to increase program readability."
@@ -32,12 +36,11 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "MORECOMMENTS_BRANCHBLOCK": "comments: %1",
-            "MORECOMMENTS_CATEGORY": "More Comments",
-            "MORECOMMENTS_COMMANDBLOCK": "comments: %1"
+            "MORECOMMENTS_BRANCHBLOCK": "comentarios: %1",
+            "MORECOMMENTS_CATEGORY": "Más Comentarios",
+            "MORECOMMENTS_COMMANDBLOCK": "comentarios: %1"
         }
     );
 

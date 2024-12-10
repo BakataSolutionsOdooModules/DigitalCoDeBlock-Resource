@@ -8,7 +8,7 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "apds9960.description": "Proximity, Light, RGB, and Gesture Sensor which uses an I2C interface."
+            "apds9960.description": "Sensor de Proximidad, Luz, RGB y Gestos que utiliza una interfaz I2C."
         },
         "en": {
             "apds9960.description": "Proximity, Light, RGB, and Gesture Sensor which uses an I2C interface."
@@ -22,8 +22,7 @@ function getInterfaceTranslations () {
         "zh-tw": {
             "apds9960.description": "使用 I2C 接口的接近、燈光、RGB和手勢傳感器。"
         }
-    }
-    ;
+    };
 }
 
 function registerScratchExtensionTranslations () {
@@ -31,20 +30,19 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "APDS9960_CATEGORY": "APDS9960",
-            "APDS9960_GESTURE_DOWN": "down",
-            "APDS9960_GESTURE_LEFT": "left",
-            "APDS9960_GESTURE_RIGHT": "right",
-            "APDS9960_GESTURE_UP": "up",
-            "APDS9960_INIT": "init apds9960",
-            "APDS9960_ISGESTURE": "apds9960 read gesture %1?",
-            "APDS9960_ISGESTUREAVAILABLE": "apds9960 gesture data ready?",
-            "APDS9960_ISPROXIMITYAVAILABLE": "apds9960 color data available?",
-            "APDS9960_READGESTURE": "apds9960 read gesture",
-            "APDS9960_READPROXIMITY": "apds9960 read proximity"
+            "APDS9960_GESTURE_DOWN": "abajo",
+            "APDS9960_GESTURE_LEFT": "izquierda",
+            "APDS9960_GESTURE_RIGHT": "derecha",
+            "APDS9960_GESTURE_UP": "arriba",
+            "APDS9960_INIT": "inicializar apds9960",
+            "APDS9960_ISGESTURE": "¿apds9960 lee gesto %1?",
+            "APDS9960_ISGESTUREAVAILABLE": "¿están disponibles los datos de gesto apds9960?",
+            "APDS9960_ISPROXIMITYAVAILABLE": "¿están disponibles los datos de color apds9960?",
+            "APDS9960_READGESTURE": "apds9960 lee gesto",
+            "APDS9960_READPROXIMITY": "apds9960 lee proximidad"
         }
     );
 

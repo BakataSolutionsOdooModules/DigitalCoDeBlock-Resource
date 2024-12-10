@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "pca9685.name": "Módulo PCA9685",
+            "pca9685.description": "El módulo controlador PWM de 16 canales basado en PCA9685, utiliza el bus IIC para comunicación."
+        },
         "en": {
             "pca9685.name": "PCA9685 Module",
             "pca9685.description": "The 16 channel PWM driver module based on PCA9685, uses IIC bus for communication."
@@ -32,17 +36,16 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-    
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "PCA9685_CATEGORY": "PCA9685",
-            "PCA9685_INIT": "init pca9685 iic address %1",
-            "PCA9685_SETALLCHANNELPWM": "pca9685 set all channel pwm value %1",
-            "PCA9685_SETALLSERVOANGLE": "pca9685 set all servo angle %1",
-            "PCA9685_SETCHANNELPWM": "pca9685 set channel %1 pwm value %2",
-            "PCA9685_SETPWMFREQUENCY": "pca9685 set pwm frequency %1",
-            "PCA9685_SETSERVOANGLE": "pca9685 set channel %1 servo angle %2",
-            "PCA9685_SETTOSERVOMODE": "pca9685 set to servo mode"
+            "PCA9685_INIT": "iniciar pca9685 iic dirección %1",
+            "PCA9685_SETALLCHANNELPWM": "pca9685 establecer todos los canales valor pwm %1",
+            "PCA9685_SETALLSERVOANGLE": "pca9685 establecer todos los servo ángulo %1",
+            "PCA9685_SETCHANNELPWM": "pca9685 establecer canal %1 valor pwm %2",
+            "PCA9685_SETPWMFREQUENCY": "pca9685 establecer frecuencia pwm %1",
+            "PCA9685_SETSERVOANGLE": "pca9685 establecer canal %1 servo ángulo %2",
+            "PCA9685_SETTOSERVOMODE": "pca9685 establecer a modo servo"
         }
     );
 

@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "sharpIR.name": "Sensor IR Preciso",
+            "sharpIR.description": "Sensor de distancia infrarroja basado en el principio de triangulación."
+        },
         "en": {
             "sharpIR.name": "Sharp IR Sensor",
             "sharpIR.description": "Infrared distance sensor based on the principle of triangle ranging."
@@ -32,12 +36,11 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "SHARPIR_CATEGORY": "Sharp IR",
-            "SHARPIR_INIT": "init sharp IR sensor %1 pin %2 model %3",
-            "SHARPIR_READDISTANCE": "sharp IR sensor %1 read distance"
+            "SHARPIR_CATEGORY": "IR Preciso",
+            "SHARPIR_INIT": "iniciar sensor IR preciso %1 pin %2 modelo %3",
+            "SHARPIR_READDISTANCE": "sensor IR preciso %1 leer distancia"
         }
     );
 

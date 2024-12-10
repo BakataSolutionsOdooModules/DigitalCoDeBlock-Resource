@@ -21,11 +21,11 @@ function getInterfaceTranslations () {
         },
         "zh-cn": {
             "MentorBit.name": "MentorBit",
-            "MentorBit.description": "MentorBit 由 Digital CodeSign 开发。它结合了 Scratch 模块来控制 MentorBit。"
+            "MentorBit.description": "MentorBit 由 Digital CodeSign 开发。它结合了 Scratch 模块来控制 MentorBit."
         },
         "zh-tw": {
             "MentorBit.name": "MentorBit",
-            "MentorBit.description": "MentorBit 由 Digital CodeSign 開發。它結合了 Scratch 模組來控制 MentorBit。"
+            "MentorBit.description": "MentorBit 由 Digital CodeSign 開發。它結合了 Scratch 模組來控制 MentorBit."
         }
     }
     ;

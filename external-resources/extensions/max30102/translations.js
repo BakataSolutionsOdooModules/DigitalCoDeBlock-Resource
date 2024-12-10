@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "max30102.name": "MAX30102 Sensor",
-            "max30102.description": "Blood oxygen and heart rate detection module based on MAX30102."
+            "max30102.name": "Sensor MAX30102",
+            "max30102.description": "Módulo de detección de oxígeno en sangre y ritmo cardíaco basado en MAX30102."
         },
         "en": {
             "max30102.name": "MAX30102 Sensor",
@@ -36,15 +36,14 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "MAX30102_CATEGORY": "MAX30102",
-            "MAX30102_GETDATA": "max30102 get date",
-            "MAX30102_HEARTBEAT": "max30102 heart beat value per minite",
-            "MAX30102_INIT": "init max30102",
-            "MAX30102_IRVALUE": "max30102 IR value",
-            "MAX30102_ISTOUCHED": "max30102 is touched?"
+            "MAX30102_GETDATA": "max30102 obtener fecha",
+            "MAX30102_HEARTBEAT": "max30102 valor de latidos por minuto",
+            "MAX30102_INIT": "iniciar max30102",
+            "MAX30102_IRVALUE": "max30102 valor IR",
+            "MAX30102_ISTOUCHED": "¿max30102 está tocado?"
         }
     );
 

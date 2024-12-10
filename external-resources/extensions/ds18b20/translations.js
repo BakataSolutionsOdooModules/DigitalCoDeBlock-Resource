@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "ds18b20.name": "DS18B20 Sensor",
-            "ds18b20.description": "Single bus digital temperature sensor based on DS18B20."
+            "ds18b20.name": "Sensor DS18B20",
+            "ds18b20.description": "Sensor de temperatura digital basado en DS18B20."
         },
         "en": {
             "ds18b20.name": "DS18B20 Sensor",
@@ -36,13 +36,12 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "DS18B20_CATEGORY": "DS18B20",
-            "DS18B20_GETTEMPERATURE": "ds18b20 %1 temperatures %2",
-            "DS18B20_INIT": "init ds18b20 pin %1 quantity %2",
-            "DS18B20_READALLTEMPERATURES": "ds18b20 read all temperatures"
+            "DS18B20_GETTEMPERATURE": "ds18b20 %1 temperatura %2",
+            "DS18B20_INIT": "inicializar ds18b20 pin %1 cantidad %2",
+            "DS18B20_READALLTEMPERATURES": "ds18b20 leer todas las temperaturas"
         }
     );
 

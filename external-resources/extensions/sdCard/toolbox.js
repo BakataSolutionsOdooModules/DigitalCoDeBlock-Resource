@@ -18,7 +18,7 @@ function registerToolboxs () {
     <block type="sdCard_print" id="sdCard_print">
         <value name="DATA">
             <shadow type="text">
-                <field name="TEXT">Hello Openblock</field>
+                <field name="TEXT">Hello Digital Codeblock</field>
             </shadow>
         </value>
     </block>

@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "passiveBuzzer.name": "Zumbador Pasivo",
+            "passiveBuzzer.description": "A diferencia del zumbador activo, el zumbador pasivo puede utilizarse para hacer diferentes tonos de sonido y reproducir algunas melodías."
+        },
         "en": {
             "passiveBuzzer.name": "Passive Buzzer",
             "passiveBuzzer.description": "Unlike the active buzzer, the passive buzzer can be used to make different tones of sound and play some ringtones."
@@ -32,33 +36,32 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    bject.assign(Blockly.ScratchMsgs.locales["es"],
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "PASSIVEBUZZER_CATEGORY": "Passive Buzzer",
-            "PASSIVEBUZZER_CONFUSED": "confused",
-            "PASSIVEBUZZER_CONNECTION": "connection",
-            "PASSIVEBUZZER_CUDDLY": "cuddly",
-            "PASSIVEBUZZER_DIDI": "button pushed",
-            "PASSIVEBUZZER_DISCONNECTION": "disconnet",
-            "PASSIVEBUZZER_FART1": "fart1",
-            "PASSIVEBUZZER_FART2": "fart2",
-            "PASSIVEBUZZER_FART3": "fart3",
-            "PASSIVEBUZZER_HAPPY": "happy",
-            "PASSIVEBUZZER_HAPPYSHORT": "happy short",
-            "PASSIVEBUZZER_INIT": "init passive buzzer pin %1",
-            "PASSIVEBUZZER_MODE1": "mode1",
-            "PASSIVEBUZZER_MODE2": "mode2",
-            "PASSIVEBUZZER_MODE3": "mode3",
+            "PASSIVEBUZZER_CATEGORY": "Zumbador Pasivo",
+            "PASSIVEBUZZER_CONFUSED": "confundido",
+            "PASSIVEBUZZER_CONNECTION": "conexión",
+            "PASSIVEBUZZER_CUDDLY": "cariñoso",
+            "PASSIVEBUZZER_DIDI": "botón presionado",
+            "PASSIVEBUZZER_DISCONNECTION": "desconexión",
+            "PASSIVEBUZZER_FART1": "pedo1",
+            "PASSIVEBUZZER_FART2": "pedo2",
+            "PASSIVEBUZZER_FART3": "pedo3",
+            "PASSIVEBUZZER_HAPPY": "feliz",
+            "PASSIVEBUZZER_HAPPYSHORT": "feliz corto",
+            "PASSIVEBUZZER_INIT": "iniciar zumbador pasivo pin %1",
+            "PASSIVEBUZZER_MODE1": "modo1",
+            "PASSIVEBUZZER_MODE2": "modo2",
+            "PASSIVEBUZZER_MODE3": "modo3",
             "PASSIVEBUZZER_OHOOH": "OhOoh",
             "PASSIVEBUZZER_OHOOH2": "OhOoh2",
-            "PASSIVEBUZZER_PLAYRINGTONE": "play ringtone %1",
-            "PASSIVEBUZZER_PLAYTONEFORBEAT": "play tone %1 for %2 beat",
-            "PASSIVEBUZZER_SAD": "sad",
-            "PASSIVEBUZZER_SETTEMPO": "set tempo to (bpm) %1",
-            "PASSIVEBUZZER_SLEEPING": "sleeping",
-            "PASSIVEBUZZER_SUPERHAPPY": "super happy",
-            "PASSIVEBUZZER_SURPRISE": "surprise"
+            "PASSIVEBUZZER_PLAYRINGTONE": "reproducir melodía %1",
+            "PASSIVEBUZZER_PLAYTONEFORBEAT": "reproducir tono %1 para %2 ritmo",
+            "PASSIVEBUZZER_SAD": "triste",
+            "PASSIVEBUZZER_SETTEMPO": "establecer tempo a (bpm) %1",
+            "PASSIVEBUZZER_SLEEPING": "durmiendo",
+            "PASSIVEBUZZER_SUPERHAPPY": "super feliz",
+            "PASSIVEBUZZER_SURPRISE": "sorpresa"
         }
     );
 

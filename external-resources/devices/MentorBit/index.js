@@ -24,7 +24,7 @@ const MentorBit = formatMessage => ({ // M
     connectionIconURL: 'assets/deviceMentorBit-illustration.svg', // M
     connectionSmallIconURL: 'assets/deviceMentorBit-small.svg', // M
     translations: 'translations.js',
-    programMode: ['upload'],
+    programMode: ['realtime', 'upload'],
     defaultProgramMode: 'upload',
     programLanguage: ['block', 'c', 'cpp'],
     tags: ['kit'],
@@ -36,18 +36,14 @@ const MentorBitArduino = formatMessage => { // M
     const device = MentorBit(formatMessage);
     device.defaultBaudRate = '9600';
     device.deviceId = 'MentorBit_arduinoMega2560'; // M
-    device.programMode = ['realtime','upload'];
+    device.programMode = ['realtime', 'upload'];
     device.deviceExtensions = ['arduinoMentorBit']; // M // Encontrable en "./../../extensions/<device.deviceExtensiones>"
     device.deviceExtensionsCompatible = 'arduinoMega2560';
     device.hide = true;
     return device;
 };
 
-
 module.exports = formatMessage => ([
     MentorBit(formatMessage), // M
     MentorBitArduino(formatMessage), // M
 ]);
-
-
-

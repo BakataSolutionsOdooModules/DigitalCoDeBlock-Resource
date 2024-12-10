@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "cooperativeScheduler.name": "Cooperative Scheduler",
-            "cooperativeScheduler.description": "Allow Arduino run multiple tasks."
+            "cooperativeScheduler.name": "Programador Cooperativo",
+            "cooperativeScheduler.description": "Permite a Arduino ejecutar múltiples tareas."
         },
         "en": {
             "cooperativeScheduler.name": "Cooperative Scheduler",
@@ -36,13 +36,12 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "COOPERATIVESCHEDULER_CATEGORY": "Cooperative scheduler",
-            "COOPERATIVESCHEDULER_SETUP": "task %1 setup",
-            "COOPERATIVESCHEDULER_SLEEP": "task delay %1 ms",
-            "COOPERATIVESCHEDULER_START": "start cooperative scheduler"
+            "COOPERATIVESCHEDULER_CATEGORY": "Programador Cooperativo",
+            "COOPERATIVESCHEDULER_SETUP": "configurar tarea %1",
+            "COOPERATIVESCHEDULER_SLEEP": "retardar tarea %1 ms",
+            "COOPERATIVESCHEDULER_START": "iniciar programador cooperativo"
         }
     );
 

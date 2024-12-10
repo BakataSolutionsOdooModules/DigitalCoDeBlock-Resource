@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "eitghtTimesEightMatirxDisplay.name": "Visualizador de matriz 8x8",
+            "eitghtTimesEightMatirxDisplay.description": "Módulo de visualización de matriz 8x8 basado en MAX7219."
+        },
         "en": {
             "eitghtTimesEightMatirxDisplay.name": "8x8 Matrix Display",
             "eitghtTimesEightMatirxDisplay.description": "8x8 matrix display module based on MAX7219."
@@ -32,22 +36,21 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_CATEGORY": "8x8 Matrix Display",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_COLOR_BLACK": "black",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_COLOR_RED": "red",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_DRAWLINE": "8x8 martix display draw line x0: %1 y0: %2, x1: %3 y1: %4 color %5",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_DRAWPIXEL": "8x8 martix display draw pixel x: %1 y: %2 color %3",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_FILL": "8x8 martix display fill color %1",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_INIT": "init 8x8 matrix display pin CS %1",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_INIT_TOOLTIP": "pin DIN to MOSI and CLK to SCK.",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_REFRESH": "refresh the display of 8x8 martix display",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_SETBRIGHTNESS": "8x8 martix display set brightness %1",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_SETROTATION": "8x8 martix display set rotation %1",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_SHOWCHAR": "8x8 martix display show char %1 color %2",
-            "EITGHTTIMESEIGHTMATIRXDISPLAY_SHOWNUMBER": "8x8 martix display show number %1 color %2"
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_CATEGORY": "Visualizador de matriz 8x8",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_COLOR_BLACK": "negro",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_COLOR_RED": "rojo",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_DRAWLINE": "visualizador de matriz 8x8 dibujar línea x0: %1 y0: %2, x1: %3 y1: %4 color %5",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_DRAWPIXEL": "visualizador de matriz 8x8 dibujar pixel x: %1 y: %2 color %3",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_FILL": "visualizador de matriz 8x8 llenar color %1",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_INIT": "inicializar visualizador de matriz 8x8 pin CS %1",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_INIT_TOOLTIP": "pin DIN a MOSI y CLK a SCK.",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_REFRESH": "refrescar la pantalla del visualizador de matriz 8x8",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_SETBRIGHTNESS": "visualizador de matriz 8x8 establecer brillo %1",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_SETROTATION": "visualizador de matriz 8x8 establecer rotación %1",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_SHOWCHAR": "visualizador de matriz 8x8 mostrar carácter %1 color %2",
+            "EITGHTTIMESEIGHTMATIRXDISPLAY_SHOWNUMBER": "visualizador de matriz 8x8 mostrar número %1 color %2"
         }
     );
 

@@ -28,7 +28,7 @@ function registerToolboxs () {
     <block type="nrf24l01_sendString" id="nrf24l01_sendString">
         <value name="DATA">
             <shadow type="text">
-                <field name="TEXT">Hello Openblock</field>
+                <field name="TEXT">Hello Digital Codeblock</field>
             </shadow>
         </value>
         <value name="ID">

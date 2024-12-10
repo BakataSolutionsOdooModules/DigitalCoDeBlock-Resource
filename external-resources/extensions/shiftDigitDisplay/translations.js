@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "shiftDigitDisplay.name": "Visor de Dígitos Desplazables",
+            "shiftDigitDisplay.description": "Visor de dígitos desplazables basado en 74HC595 con visualizador de escaneo dinámico."
+        },
         "en": {
             "shiftDigitDisplay.name": "Shift Digit Display",
             "shiftDigitDisplay.description": "Digital dislapy based on 74HC595 with dynamic scanning display."
@@ -32,15 +36,14 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "SHIFTDIGITDISPLAY_CATEGORY": "Shift Digit Display",
-            "SHIFTDIGITDISPLAY_DISPLAYNUMBER": "shift digit display display number %1 decimal %2",
-            "SHIFTDIGITDISPLAY_DISPLAYSTRING": "shift digit display display string %1",
-            "SHIFTDIGITDISPLAY_INIT": "init shift digit display length %1 pin SCLK %2 RCLK %3 DIO %4",
-            "SHIFTDIGITDISPLAY_REFRESH_TOOLTIP": "This command will block the program.",
-            "SHIFTDIGITDISPLAY_SHOW": "shift digit display show for %1 ms"
+            "SHIFTDIGITDISPLAY_CATEGORY": "Visor de Dígitos Desplazables",
+            "SHIFTDIGITDISPLAY_DISPLAYNUMBER": "visor de dígitos desplazables mostrar número %1 decimal %2",
+            "SHIFTDIGITDISPLAY_DISPLAYSTRING": "visor de dígitos desplazables mostrar cadena %1",
+            "SHIFTDIGITDISPLAY_INIT": "iniciar visor de dígitos desplazables longitud %1 pin SCLK %2 RCLK %3 DIO %4",
+            "SHIFTDIGITDISPLAY_REFRESH_TOOLTIP": "Este comando bloqueará el programa.",
+            "SHIFTDIGITDISPLAY_SHOW": "visor de dígitos desplazables mostrar durante %1 ms"
         }
     );
 

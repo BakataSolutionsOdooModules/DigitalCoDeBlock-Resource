@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "mfrc522.name": "MFRC-522 Module",
-            "mfrc522.description": "13.56MHz radio frequency identification module using spi interface."
+            "mfrc522.name": "Módulo MFRC-522",
+            "mfrc522.description": "Módulo de identificación de radiofrecuencia de 13,56 MHz utilizando la interfaz SPI."
         },
         "en": {
             "mfrc522.name": "MFRC-522 Module",
@@ -36,27 +36,26 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
             "MFRC522_CATEGORY": "MFRC522",
-            "MFRC522_DATATYPE_NUBMER": "number",
-            "MFRC522_DATATYPE_STRING": "string",
-            "MFRC522_GETBLOCKDATA": "mfrc522 block data (type %1)",
-            "MFRC522_GETBLOCKDATA_TOOLTIP": "String length less than 16 byte.",
-            "MFRC522_GETCARDTYPENAME": "mfrc522 get card type name",
-            "MFRC522_GETCARDUID": "mfrc522 get card UID",
-            "MFRC522_HALT": "mfrc522 halt",
-            "MFRC522_INIT": "init mfrc522 pin CS %1 RST %2",
-            "MFRC522_ISNEWCARDPRESENT": "new card present?",
-            "MFRC522_NUMBERTOHEXSTRING": "mfrc522 %1 to hex string",
-            "MFRC522_PRINTSECTORDATA": "mfrc522 print sector %1 data",
-            "MFRC522_READBLOCKDATA": "mfrc522 read block %1",
-            "MFRC522_READCARDSERIAL": "mfrc522 successfully read card serial number?",
-            "MFRC522_SETKEY": "mfrc522 set secret key %1",
-            "MFRC522_VERIFICATIONKEY": "mfrc522 verification block %1 key is correct?",
-            "MFRC522_WRITEBLOCKDATA": "mfrc522 write %1 to block %2 (type %3)",
-            "MFRC522_WRITEKEYTOSECTOR": "mfrc522 write key %1 to sector %2"
+            "MFRC522_DATATYPE_NUBMER": "número",
+            "MFRC522_DATATYPE_STRING": "cadena",
+            "MFRC522_GETBLOCKDATA": "mfrc522 datos del bloque (tipo %1)",
+            "MFRC522_GETBLOCKDATA_TOOLTIP": "Longitud de la cadena menor a 16 bytes.",
+            "MFRC522_GETCARDTYPENAME": "mfrc522 obtener nombre del tipo de tarjeta",
+            "MFRC522_GETCARDUID": "mfrc522 obtener UID de la tarjeta",
+            "MFRC522_HALT": "mfrc522 parar",
+            "MFRC522_INIT": "iniciar mfrc522 pin CS %1 RST %2",
+            "MFRC522_ISNEWCARDPRESENT": "¿nueva tarjeta presente?",
+            "MFRC522_NUMBERTOHEXSTRING": "mfrc522 %1 a cadena hexadecimal",
+            "MFRC522_PRINTSECTORDATA": "mfrc522 imprimir datos del sector %1",
+            "MFRC522_READBLOCKDATA": "mfrc522 leer bloque %1",
+            "MFRC522_READCARDSERIAL": "¿mfrc522 ha leído el número de serie de la tarjeta?",
+            "MFRC522_SETKEY": "mfrc522 establecer clave secreta %1",
+            "MFRC522_VERIFICATIONKEY": "¿mfrc522 clave de verificación del bloque %1 es correcta?",
+            "MFRC522_WRITEBLOCKDATA": "mfrc522 escribir %1 en bloque %2 (tipo %3)",
+            "MFRC522_WRITEKEYTOSECTOR": "mfrc522 escribir clave %1 en sector %2"
         }
     );
 

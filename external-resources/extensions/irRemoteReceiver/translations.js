@@ -8,8 +8,8 @@
 function getInterfaceTranslations () {
     return {
         "es": {
-            "irRemoteReceiver.name": "IR Remote Receiver",
-            "irRemoteReceiver.description": "Receiving and decoding data in infrared carrier."
+            "irRemoteReceiver.name": "Receptor remoto IR",
+            "irRemoteReceiver.description": "Recepción y decodificación de datos en portadora infrarroja."
         },
         "en": {
             "irRemoteReceiver.name": "IR Remote Receiver",
@@ -36,13 +36,13 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "IRREMOTERECEIVER_CATEGORY": "IR Remote Receiver",
-            "IRREMOTERECEIVER_DATAAVAILABLE": "IR remote receiver data available?",
-            "IRREMOTERECEIVER_INIT": "init IR remote receiver pin %1",
-            "IRREMOTERECEIVER_RECIVEDCOMMAND": "IR remote recived command",
-            "IRREMOTERECEIVER_RESUME": "IR remote resume recive"
+            "IRREMOTERECEIVER_CATEGORY": "Receptor Remoto IR",
+            "IRREMOTERECEIVER_DATAAVAILABLE": "¿datos disponibles en receptor remoto IR?",
+            "IRREMOTERECEIVER_INIT": "iniciar receptor remoto IR en pin %1",
+            "IRREMOTERECEIVER_RECIVEDCOMMAND": "comando recibido en receptor remoto IR",
+            "IRREMOTERECEIVER_RESUME": "reanudar recepción en receptor remoto IR"
         }
     );
 

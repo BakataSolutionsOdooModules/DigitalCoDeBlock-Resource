@@ -7,6 +7,9 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "tcs3200.description": "Módulo sensor de color basado en TCS3200."
+        },
         "en": {
             "tcs3200.description": "Color sensor module based on TCS3200."
         },
@@ -28,19 +31,18 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "TCS3200_CALIBRATEBLACK": "tcs3200 calibrate black",
-            "TCS3200_CALIBRATEWHITE": "tcs3200 calibrate white",
+            "TCS3200_CALIBRATEBLACK": "tcs3200 calibrar negro",
+            "TCS3200_CALIBRATEWHITE": "tcs3200 calibrar blanco",
             "TCS3200_CATEGORY": "TCS3200",
-            "TCS3200_COLOR_BLUE": "blue",
-            "TCS3200_COLOR_GREEN": "green",
-            "TCS3200_COLOR_RED": "red",
-            "TCS3200_GETCOLORVALUE": "tcs3200 get %1 value",
-            "TCS3200_INIT": "init tcs3200 pin S0 %1 S1 %2 S2 %3 S3 %4 S5 %5",
-            "TCS3200_INIT_TOOLTIP": "The out pin is fixed: Arduino Uno pin 5, Arduino Leonardo pin 12, Arduino Mega pin 47",
-            "TCS3200_MEASURECOLOR": "tcs3200 measure color"
+            "TCS3200_COLOR_BLUE": "azul",
+            "TCS3200_COLOR_GREEN": "verde",
+            "TCS3200_COLOR_RED": "rojo",
+            "TCS3200_GETCOLORVALUE": "tcs3200 conseguir valor de %1",
+            "TCS3200_INIT": "iniciar tcs3200 pin S0 %1 S1 %2 S2 %3 S3 %4 S5 %5",
+            "TCS3200_INIT_TOOLTIP": "El pin de salida es fijo: Arduino Uno pin 5, Arduino Leonardo pin 12, Arduino Mega pin 47",
+            "TCS3200_MEASURECOLOR": "tcs3200 medir color"
         }
     );
 

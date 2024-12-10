@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "sdCard.name": "Módulo Tarjeta SD",
+            "sdCard.description": "Guarda o lee tus datos en una tarjeta SD."
+        },
         "en": {
             "sdCard.name": "SD Card Module",
             "sdCard.description": "Save or read your data in SD card."
@@ -32,24 +36,23 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
     Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "SDCARD_CATEGORY": "SD Card",
-            "SDCARD_CLOSEFILE": "sd card close file",
-            "SDCARD_CREATEFILE": "sd card create file %1",
-            "SDCARD_DELETEFILE": "sd card delet file %1",
-            "SDCARD_EOL_NOWARP": "no-warp",
-            "SDCARD_EOL_WARP": "warp",
-            "SDCARD_FILEDATAAVAILABLE": "sd card file data available",
-            "SDCARD_INIT": "init sd card pin CS %1",
-            "SDCARD_ISFILEEXISTS": "sd card file %1 exists?",
-            "SDCARD_MODE_READ": "read only",
-            "SDCARD_MODE_READWRITE": "read & write",
-            "SDCARD_OPENFILE": "sd card open file %1 mode %2",
-            "SDCARD_OPENFILE_TOOLTIP": "If file not exists, it will be created automatically.",
-            "SDCARD_PRINT": "print %1 %2 to file",
-            "SDCARD_READFILEDATA": "sd card read file data"
+            "SDCARD_CATEGORY": "Tarjeta SD",
+            "SDCARD_CLOSEFILE": "tarjeta sd cerrar archivo",
+            "SDCARD_CREATEFILE": "tarjeta sd crear archivo %1",
+            "SDCARD_DELETEFILE": "tajeta sd borrar archivo %1",
+            "SDCARD_EOL_NOWARP": "sin deformar",
+            "SDCARD_EOL_WARP": "deformar",
+            "SDCARD_FILEDATAAVAILABLE": "tarjeta sd datos disponibles",
+            "SDCARD_INIT": "iniciar tarjeta sd pin CS %1",
+            "SDCARD_ISFILEEXISTS": "¿archivo de tajeta sd %1 existe?",
+            "SDCARD_MODE_READ": "solo lectura",
+            "SDCARD_MODE_READWRITE": "leer y escribir",
+            "SDCARD_OPENFILE": "tarjeta sd abrir archivo %1 modo %2",
+            "SDCARD_OPENFILE_TOOLTIP": "Si el archivo no existe, se creará automáticamente.",
+            "SDCARD_PRINT": "imprimir %1 %2 a archivo",
+            "SDCARD_READFILEDATA": "tarjeta sd leer datos de archivo"
         }
     );
 

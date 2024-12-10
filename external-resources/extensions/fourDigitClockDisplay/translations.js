@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "fourDigitClockDisplay.name": "Visor de reloj de 4 dígitos",
+            "fourDigitClockDisplay.description": "Módulo de visor de reloj de 4 dígitos basado en TM1637."
+        },
         "en": {
             "fourDigitClockDisplay.name": "4-Digit Clock Display",
             "fourDigitClockDisplay.description": "4-digit clock display module based on TM1637."
@@ -32,21 +36,19 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "FOURDIGITCLOCKDISPLAY_CATEGORY": "4-Digit Clock Display",
-            "FOURDIGITCLOCKDISPLAY_CLEAR": "clear 4-digit clock display",
-            "FOURDIGITCLOCKDISPLAY_DISPLAY": "4-digit clock display show %1 at bit %2",
-            "FOURDIGITCLOCKDISPLAY_DISPLAYNUMBER": "4-digit clock display show number %1",
-            "FOURDIGITCLOCKDISPLAY_DISPLAYSTRING": "4-digit clock display show string %1",
-            "FOURDIGITCLOCKDISPLAY_INIT": "init 4-digit clock display pin DIO %1 CLK %2",
-            "FOURDIGITCLOCKDISPLAY_SETBRIGHTNESS": "set 4-digit clock display brightness %1",
-            "FOURDIGITCLOCKDISPLAY_SETPOINT": "4-digit clock display set point %1",
-            "FOURDIGITCLOCKDISPLAY_SETPOINT_TOOLTIP": "It will take effect after the next update of the display.",
-            "FOURDIGITCLOCKDISPLAY_STATE_OFF": "off",
-            "FOURDIGITCLOCKDISPLAY_STATE_ON": "on"
+            "FOURDIGITCLOCKDISPLAY_CATEGORY": "Visor de reloj de 4 dígitos",
+            "FOURDIGITCLOCKDISPLAY_CLEAR": "limpiar visor de reloj de 4 dígitos",
+            "FOURDIGITCLOCKDISPLAY_DISPLAY": "visor de reloj de 4 dígitos mostrar %1 en bit %2",
+            "FOURDIGITCLOCKDISPLAY_DISPLAYNUMBER": "visor de reloj de 4 dígitos mostrar número %1",
+            "FOURDIGITCLOCKDISPLAY_DISPLAYSTRING": "visor de reloj de 4 dígitos mostrar cadena %1",
+            "FOURDIGITCLOCKDISPLAY_INIT": "iniciar visor de reloj de 4 dígitos pin DIO %1 CLK %2",
+            "FOURDIGITCLOCKDISPLAY_SETBRIGHTNESS": "establecer visor de reloj de 4 dígitos brillo %1",
+            "FOURDIGITCLOCKDISPLAY_SETPOINT": "visor de reloj de 4 dígitos establecer punto %1",
+            "FOURDIGITCLOCKDISPLAY_SETPOINT_TOOLTIP": "Tendrá efecto después de la siguiente actualización de la pantalla.",
+            "FOURDIGITCLOCKDISPLAY_STATE_OFF": "apagado",
+            "FOURDIGITCLOCKDISPLAY_STATE_ON": "encendido"
         }
     );
 

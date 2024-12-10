@@ -7,6 +7,10 @@
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
     return {
+        "es": {
+            "mpu6050.name": "Sensor MPU6050",
+            "mpu6050.description": "Modulo sensor de 6 ejes basado en MPU6050."
+        },
         "en": {
             "mpu6050.name": "MPU6050 Sensor",
             "mpu6050.description": "6-axis attitude sensor module based on MPU6050."
@@ -32,15 +36,14 @@ function registerScratchExtensionTranslations () {
 }
 
 function registerBlocksMessages (Blockly) {
-
-    Object.assign(Blockly.ScratchMsgs.locales["es"], //TRADUCIR
+    Object.assign(Blockly.ScratchMsgs.locales["es"],
         {
-            "MPU6050_ACCELERATION": "mpu6050 %1 axis acceleration (m/s^2)",
+            "MPU6050_ACCELERATION": "mpu6050 %1 aceleración en el eje (m/s^2)",
             "MPU6050_CATEGORY": "MPU6050",
-            "MPU6050_GYRO": "mpu6050 %1 axis rotation (rad/s)",
-            "MPU6050_INIT": "init mpu6050 accelerometer range %1 gyro range %2 filter bandwidth %3",
-            "MPU6050_READDATA": "mpu6050 read data",
-            "MPU6050_TEMPERATURE": "mpu6050 temperature (℃)"
+            "MPU6050_GYRO": "mpu6050 %1 rotación en el eje (rad/s)",
+            "MPU6050_INIT": "inicializar mpu6050 rango acelerómetro %1 rango giroscopio %2 ancho de banda del filtro %3",
+            "MPU6050_READDATA": "mpu6050 leer datos",
+            "MPU6050_TEMPERATURE": "mpu6050 temperatura (℃)"
         }
     );
 
