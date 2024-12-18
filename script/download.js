@@ -125,7 +125,7 @@ getLatest()
         const checksumName = checksum.name;
         const checksumPath = path.join(downloadPath, checksumName);
 
-        const extractPath = path.resolve('./', 'external-resources');
+        const extractPath = path.resolve('./');
 
         return download(resourceUrl, resourcePath)
             .then(() => download(checksumUrl, checksumPath))
