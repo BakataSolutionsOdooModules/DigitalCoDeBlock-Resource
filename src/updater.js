@@ -36,14 +36,8 @@ class ResourceUpdater {
         if (!option.signal) {
             option.signal = this.fakeSignal;
         }
-
-        if (this._provider === 'github') {
-            this.releasesLatestUrl = `https://api.github.com/repos/${this._config.repo}/releases/latest`;
-        } else if (this._provider === 'spaces') {
-            this.releasesLatestUrl = `https://${this._config.name}.${this._config.region}.digitaloceanspaces.com/${this._config.path}/latestRelease.json`;
-        } else if (this._provider === 'gitee') {
-            this.releasesLatestUrl = `https://gitee.com/api/v5/repos/${this._config.repo}/releases/latest`;
-        }
+        
+        this.releasesLatestUrl = `https://api.github.com/repos/${this._config.repo}/releases/latest`;
 
         return fetch(this.releasesLatestUrl, {signal: option.signal})
             .then(res => res.json());
