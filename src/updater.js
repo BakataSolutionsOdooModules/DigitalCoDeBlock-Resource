@@ -20,7 +20,7 @@ class ResourceUpdater {
         if (!this._provider) {
             throw new Error('ERR!: You have to set a provider');
         }
-        if (this._provider !== 'github' && this._provider !== 'spaces' && this._provider !== 'gitee') {
+        if (this._provider !== 'github') {
             throw new Error('ERR!: Not a valid provider');
         }
 
@@ -158,32 +158,8 @@ class ResourceUpdater {
         const resourceName = `external-resources-${shortVersion}.zip`;
         const checksumName = `${shortVersion}-checksums-sha256.txt`;
 
-        let resourceUrl;
-        let checksumUrl;
-
-        if (this._provider === 'github') {
-            resourceUrl = `https://github.com/${this._config.repo}/releases/download/${version}/${resourceName}`;
-            checksumUrl = `https://github.com/${this._config.repo}/releases/download/${version}/${checksumName}`;
-
-        } else if (this._provider === 'spaces') {
-            resourceUrl = `https://${this._config.name}.${this._config.region}.digitaloceanspaces.com/${this._config.path}/${resourceName}`;
-            checksumUrl = `https://${this._config.name}.${this._config.region}.digitaloceanspaces.com/${this._config.path}/${checksumName}`;
-
-        } else if (this._provider === 'gitee') {
-            if (this.releaseInfo) {
-                for (const idx in this.releaseInfo.assets) {
-                    const info = this.releaseInfo.assets[idx];
-                    const name = info.name;
-                    if (!name) {
-                        continue;
-                    } if (name.indexOf('external-resources') !== -1) {
-                        resourceUrl = `${info.browser_download_url}/${info.name}`;
-                    } else if (name.indexOf('checksums-sha256') !== -1) {
-                        checksumUrl = `${info.browser_download_url}/${info.name}`;
-                    }
-                }
-            }
-        }
+        const resourceUrl = `https://github.com/${this._config.repo}/releases/download/${version}/${resourceName}`;
+        const checksumUrl = `https://github.com/${this._config.repo}/releases/download/${version}/${checksumName}`;
 
         const resourcePath = path.join(downloadPath, resourceName);
         const checksumPath = path.join(downloadPath, checksumName);

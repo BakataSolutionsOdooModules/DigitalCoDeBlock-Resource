@@ -34,7 +34,7 @@ const DEFAULT_PORT = 20112;
  * Server name, ues in root path.
  * @readonly
  */
-const SERVER_NAME = 'openblock-resource-server';
+const SERVER_NAME = 'digitalcodeblock-resource-server';
 
 /**
  * The time interval for retrying to open the port after the port is occupied by another openblock-resource server.

@@ -20,7 +20,7 @@ const {formatTime} = require('../src/format');
 const parseArgs = require('./lib/parseArgs');
 
 
-const {repo, plat, cdn} = parseArgs();
+const {repo, cdn} = parseArgs();
 
 
 if (!repo) {
@@ -29,12 +29,8 @@ if (!repo) {
 }
 
 const getLatest = () => {
-    let url;
-    if (plat === 'github' || !plat) {
-        url = `https://api.github.com/repos/${repo}/releases/latest`;
-    } else if (plat === 'gitee') {
-        url = `https://gitee.com/api/v5/repos/${repo}//releases/latest`;
-    }
+    let url = `https://api.github.com/repos/${repo}/releases/latest`;
+
     if (cdn) {
         url = `${cdn}/${url}`;
     }
