@@ -1,6 +1,6 @@
 {
   "name": "digitalcodeblock-resource",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "External resources for DigitalCoDeBlock projects",
   "main": "index.js",
   "bin": {
