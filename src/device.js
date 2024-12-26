@@ -63,7 +63,7 @@ class OpenBlockDevice {
                         deviceData.translations = path.join(basePath, deviceData.translations);
                     }
                     if (deviceData.firmware) {
-                        deviceData.firmware = path.join(basePath, deviceData.firmware);
+                        deviceData.firmware = path.join(dataPath, basePath, deviceData.firmware);
                     }
                     if (deviceData.arduinoData) {
                         deviceData.arduinoData = path.join(basePath, deviceData.arduinoData);
